@@ -10,4 +10,5 @@ import UIKit
 
 class TablesCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var tableNo: UILabel!
 }

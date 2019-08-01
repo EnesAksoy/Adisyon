@@ -8,23 +8,39 @@
 
 import UIKit
 
-class TablesVC: UIViewController {
+class TablesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+   
+    
 
+    @IBOutlet weak var tablesCollection: UICollectionView!
+    
+    var masalarDeneme = ["masa 1", "masa 2", "masa 3", "masa 4", "masa 5"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+       return self.masalarDeneme.count
     }
-    */
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+       
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tableCell", for: indexPath) as! TablesCollectionViewCell
+        cell.tableNo.text = masalarDeneme[indexPath.row]
+        cell.backgroundColor = UIColor.blue
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 8
+        
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+      print("\(indexPath.row)seçildi")
+        
+    }
+    
 
 }
