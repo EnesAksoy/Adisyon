@@ -10,9 +10,9 @@ import UIKit
 
 class SigUpViewController: UIViewController {
     
-    @IBOutlet weak var email: UILabel!
-    @IBOutlet weak var password: UILabel!
-    @IBOutlet weak var passwordAgain: UILabel!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var passwordAgain: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()

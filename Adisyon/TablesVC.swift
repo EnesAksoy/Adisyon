@@ -30,17 +30,20 @@ class TablesVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tableCell", for: indexPath) as! TablesCollectionViewCell
         cell.tableNo.text = masalarDeneme[indexPath.row]
-        cell.backgroundColor = UIColor.blue
+        cell.backgroundColor = UIColor.green
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 8
         
         return cell
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-      print("\(indexPath.row)seçildi")
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.backgroundColor = UIColor.red
         
     }
-    
-
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.backgroundColor = UIColor.green
+    }
 }

@@ -10,9 +10,10 @@ import UIKit
 
 class TableSaveVC: UIViewController {
 
-    @IBOutlet weak var tableName: UILabel!
+  
+    @IBOutlet weak var tableName: UITextField!
     
-    var table = TablesVC ()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +22,11 @@ class TableSaveVC: UIViewController {
     }
     
     @IBAction func saveTableButton(_ sender: Any) {
+       
         
-        
-        table.masalarDeneme.append((tableName.text)!)
-        
+       
+        dismiss(animated: true, completion: nil)
+         
         
     }
     

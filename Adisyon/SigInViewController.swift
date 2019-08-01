@@ -10,9 +10,9 @@ import UIKit
 
 class SigInViewController: UIViewController {
 
-    @IBOutlet weak var email: UILabel!
-    @IBOutlet weak var password: UILabel!
-    @IBOutlet weak var token: UILabel!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var token: UITextField!
     
     
     override func viewDidLoad() {
