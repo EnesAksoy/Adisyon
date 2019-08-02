@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SigInViewController: UIViewController {
 
@@ -23,17 +24,19 @@ class SigInViewController: UIViewController {
     
     @IBAction func sigIn(_ sender: Any) {
         
-        if (email.text?.isEmpty)! && (password.text?.isEmpty)! {
+        if (email.text?.isEmpty)! && (password.text?.isEmpty)! && (token.text?.isEmpty)! {
             showAlert(title: "HATA", message: "Lütfen boş alan bırakmayınız")
         }else{
-            
-            
-            
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let orderOrAmountVC = storyboard.instantiateViewController(withIdentifier: "OrderOrAmountVC")
-            
-            present(orderOrAmountVC, animated: true, completion: nil)
+            Auth.auth().signIn(withEmail: email.text!, password: password.text!) { (user, error) in
+                if error != nil {
+                    self.showAlert(title: "HATA", message: error!.localizedDescription)
+                }else{
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let orderOrAmountVC = storyboard.instantiateViewController(withIdentifier: "OrderOrAmountVC")
+                    
+                    self.present(orderOrAmountVC, animated: true, completion: nil)
+                }
+            }
         }
     }
     @IBAction func sigUp(_ sender: Any) {
