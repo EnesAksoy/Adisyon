@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SigUpViewController: UIViewController {
     
@@ -21,7 +22,20 @@ class SigUpViewController: UIViewController {
     }
     
     @IBAction func sigUp(_ sender: Any) {
-        
+        if email.text!.isEmpty && password.text!.isEmpty && passwordAgain.text!.isEmpty {
+            showAlert(title: "HATA", message: "Lütfen boş alan bırakmayınız")
+        }
+        if password.text != passwordAgain.text {
+            showAlert(title: "HATA", message: "Şifre tekrarlarınız yanlış")
+        }
+        Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, error) in
+            
+            if let error = error {
+                self.showAlert(title: "HATA", message: error.localizedDescription)
+            }else{
+                self.showAlert(title: "TEBRİKLER", message: "Kullanıcı Kaydınız Tamamlanmıştır")
+            }
+        }
     }
     @IBAction func sigIn(_ sender: Any) {
         

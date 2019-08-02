@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49BD9D28CCEA4808F05C2BB3 /* Pods_Adisyon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503CDD7316D0BEF62F418276 /* Pods_Adisyon.framework */; };
 		8F3CDA4E22F2F0CC000CB4DC /* TablesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3CDA4D22F2F0CC000CB4DC /* TablesCollectionViewCell.swift */; };
 		8F3CDA5022F2F90A000CB4DC /* TableSaveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3CDA4F22F2F90A000CB4DC /* TableSaveVC.swift */; };
+		8F3CDA5222F452E5000CB4DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F3CDA5122F452E5000CB4DC /* GoogleService-Info.plist */; };
 		8F8E786622F1A00A0045155E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E786522F1A00A0045155E /* AppDelegate.swift */; };
 		8F8E786B22F1A00A0045155E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8E786922F1A00A0045155E /* Main.storyboard */; };
 		8F8E786D22F1A00B0045155E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F8E786C22F1A00B0045155E /* Assets.xcassets */; };
@@ -20,8 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		503CDD7316D0BEF62F418276 /* Pods_Adisyon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Adisyon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B7F3E72B3EDA87F486570B4 /* Pods-Adisyon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adisyon.debug.xcconfig"; path = "Target Support Files/Pods-Adisyon/Pods-Adisyon.debug.xcconfig"; sourceTree = "<group>"; };
 		8F3CDA4D22F2F0CC000CB4DC /* TablesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesCollectionViewCell.swift; sourceTree = "<group>"; };
 		8F3CDA4F22F2F90A000CB4DC /* TableSaveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSaveVC.swift; sourceTree = "<group>"; };
+		8F3CDA5122F452E5000CB4DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8F8E786222F1A00A0045155E /* Adisyon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adisyon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F8E786522F1A00A0045155E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F8E786A22F1A00A0045155E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -32,6 +37,7 @@
 		8F8E787922F1A1AF0045155E /* SigUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigUpViewController.swift; sourceTree = "<group>"; };
 		8F8E787B22F1A45A0045155E /* OrderOrAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderOrAmountVC.swift; sourceTree = "<group>"; };
 		8F8E787D22F1A6AF0045155E /* TablesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesVC.swift; sourceTree = "<group>"; };
+		A55CC34B85CE2A463E670835 /* Pods-Adisyon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adisyon.release.xcconfig"; path = "Target Support Files/Pods-Adisyon/Pods-Adisyon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +45,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49BD9D28CCEA4808F05C2BB3 /* Pods_Adisyon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49690090AB4905E1FF21B83B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B7F3E72B3EDA87F486570B4 /* Pods-Adisyon.debug.xcconfig */,
+				A55CC34B85CE2A463E670835 /* Pods-Adisyon.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8F8E785922F1A00A0045155E = {
 			isa = PBXGroup;
 			children = (
 				8F8E786422F1A00A0045155E /* Adisyon */,
 				8F8E786322F1A00A0045155E /* Products */,
+				49690090AB4905E1FF21B83B /* Pods */,
+				B1925878BD77F25813E16FFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,8 +94,17 @@
 				8F8E786C22F1A00B0045155E /* Assets.xcassets */,
 				8F8E786E22F1A00B0045155E /* LaunchScreen.storyboard */,
 				8F8E787122F1A00B0045155E /* Info.plist */,
+				8F3CDA5122F452E5000CB4DC /* GoogleService-Info.plist */,
 			);
 			path = Adisyon;
+			sourceTree = "<group>";
+		};
+		B1925878BD77F25813E16FFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				503CDD7316D0BEF62F418276 /* Pods_Adisyon.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F8E787422F1A00B0045155E /* Build configuration list for PBXNativeTarget "Adisyon" */;
 			buildPhases = (
+				4415BBD582BFC6FD673528D5 /* [CP] Check Pods Manifest.lock */,
 				8F8E785E22F1A00A0045155E /* Sources */,
 				8F8E785F22F1A00A0045155E /* Frameworks */,
 				8F8E786022F1A00A0045155E /* Resources */,
+				921A6F8566D2B2B5E27EB406 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,12 +168,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F8E787022F1A00B0045155E /* LaunchScreen.storyboard in Resources */,
+				8F3CDA5222F452E5000CB4DC /* GoogleService-Info.plist in Resources */,
 				8F8E786D22F1A00B0045155E /* Assets.xcassets in Resources */,
 				8F8E786B22F1A00A0045155E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4415BBD582BFC6FD673528D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Adisyon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		921A6F8566D2B2B5E27EB406 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Adisyon/Pods-Adisyon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Adisyon/Pods-Adisyon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Adisyon/Pods-Adisyon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8F8E785E22F1A00A0045155E /* Sources */ = {
@@ -300,6 +373,7 @@
 		};
 		8F8E787522F1A00B0045155E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B7F3E72B3EDA87F486570B4 /* Pods-Adisyon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -318,6 +392,7 @@
 		};
 		8F8E787622F1A00B0045155E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A55CC34B85CE2A463E670835 /* Pods-Adisyon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
