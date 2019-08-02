@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Te2-hM-xVV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -152,7 +152,7 @@
         <!--Order Or AmountVC-->
         <scene sceneID="56g-SS-ovS">
             <objects>
-                <viewController id="JWb-gf-3dE" customClass="OrderOrAmountVC" customModule="Adisyon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderOrAmountVC" id="JWb-gf-3dE" customClass="OrderOrAmountVC" customModule="Adisyon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hyd-cA-0te">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -197,13 +197,13 @@
         <!--TablesVC-->
         <scene sceneID="Pv0-2Z-RyU">
             <objects>
-                <viewController id="Te2-hM-xVV" customClass="TablesVC" customModule="Adisyon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TablesVC" id="Te2-hM-xVV" customClass="TablesVC" customModule="Adisyon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ryw-ha-pHh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="unD-b6-ySN">
-                                <rect key="frame" x="0.0" y="180" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="136" width="414" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jb6-bZ-poN">
                                     <size key="itemSize" width="200" height="60"/>
@@ -245,13 +245,13 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6O-Aa-Fk2">
-                                <rect key="frame" x="245" y="115" width="149" height="36"/>
+                                <rect key="frame" x="245" y="71" width="149" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="gu8-J8-qX4"/>
                                 </constraints>
                                 <state key="normal" title="Masa Ekle"/>
                                 <connections>
-                                    <segue destination="JpB-XH-HHo" kind="show" id="0rU-sB-5KH"/>
+                                    <segue destination="2YK-sv-fib" kind="show" id="t47-3r-RHq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -312,11 +312,7 @@
                         <viewLayoutGuide key="safeArea" id="uye-QA-uMq"/>
                     </view>
                     <navigationItem key="navigationItem" id="fZR-3Q-VHG">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ZbI-bH-E6S">
-                            <connections>
-                                <segue destination="Te2-hM-xVV" kind="show" id="U0K-52-qxz"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ZbI-bH-E6S"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableName" destination="JEe-AX-h1A" id="FrN-ro-LLb"/>
@@ -325,24 +321,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJn-Xt-qqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4168.115942028986" y="835.71428571428567"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="HOU-i4-YMA">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JpB-XH-HHo" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nXu-yE-26z">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="2YK-sv-fib" kind="relationship" relationship="rootViewController" id="aQ8-xj-nTf"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fvc-PS-4O7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3257.971014492754" y="835.71428571428567"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

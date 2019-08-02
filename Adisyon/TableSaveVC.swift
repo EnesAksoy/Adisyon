@@ -10,10 +10,9 @@ import UIKit
 
 class TableSaveVC: UIViewController {
 
-  
     @IBOutlet weak var tableName: UITextField!
     
-    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +21,15 @@ class TableSaveVC: UIViewController {
     }
     
     @IBAction func saveTableButton(_ sender: Any) {
-       
         
-       
-        dismiss(animated: true, completion: nil)
-         
+        
+        
+        
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tablesVC = storyboard.instantiateViewController(withIdentifier: "TablesVC")
+        
+        present(tablesVC, animated: true, completion: nil)
         
     }
-    
-
-   
 }

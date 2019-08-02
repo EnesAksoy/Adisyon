@@ -23,13 +23,29 @@ class SigInViewController: UIViewController {
     
     @IBAction func sigIn(_ sender: Any) {
         
-        
+        if (email.text?.isEmpty)! && (password.text?.isEmpty)! {
+            showAlert(title: "HATA", message: "Lütfen boş alan bırakmayınız")
+        }else{
+            
+            
+            
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let orderOrAmountVC = storyboard.instantiateViewController(withIdentifier: "OrderOrAmountVC")
+            
+            present(orderOrAmountVC, animated: true, completion: nil)
+        }
     }
     @IBAction func sigUp(_ sender: Any) {
-        
-        
     }
     
-    
-    
+}
+
+extension UIViewController {
+    func showAlert (title:String, message:String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))
+        self.present(alert,animated:true,completion:nil)
+    }
 }

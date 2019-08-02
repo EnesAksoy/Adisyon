@@ -15,10 +15,13 @@ class TablesVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var tablesCollection: UICollectionView!
     
     var masalarDeneme = ["masa 1", "masa 2", "masa 3", "masa 4", "masa 5"]
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+       
+       
         // Do any additional setup after loading the view.
     }
     
