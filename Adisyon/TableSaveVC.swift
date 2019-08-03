@@ -7,29 +7,30 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class TableSaveVC: UIViewController {
 
     @IBOutlet weak var tableName: UITextField!
     
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func saveTableButton(_ sender: Any) {
         
+        if tableName.text == ""{
+            showAlert(title: "HATA", message: "Lütfen masa ismini giriniz")
+        }else{
+            Database.database().reference().child("TableNames").childByAutoId().setValue(tableName.text)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let tablesVC = storyboard.instantiateViewController(withIdentifier: "TablesVC")
+            
+            present(tablesVC, animated: true, completion: nil)
+        }
         
-        
-        
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tablesVC = storyboard.instantiateViewController(withIdentifier: "TablesVC")
-        
-        present(tablesVC, animated: true, completion: nil)
         
     }
 }
