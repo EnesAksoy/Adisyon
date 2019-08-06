@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		8F8E787A22F1A1AF0045155E /* SigUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E787922F1A1AF0045155E /* SigUpViewController.swift */; };
 		8F8E787C22F1A45A0045155E /* OrderOrAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E787B22F1A45A0045155E /* OrderOrAmountVC.swift */; };
 		8F8E787E22F1A6AF0045155E /* TablesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E787D22F1A6AF0045155E /* TablesVC.swift */; };
+		8FFBDEBC22F99811003CED98 /* DeleteTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFBDEBB22F99811003CED98 /* DeleteTableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		8F8E787922F1A1AF0045155E /* SigUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigUpViewController.swift; sourceTree = "<group>"; };
 		8F8E787B22F1A45A0045155E /* OrderOrAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderOrAmountVC.swift; sourceTree = "<group>"; };
 		8F8E787D22F1A6AF0045155E /* TablesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesVC.swift; sourceTree = "<group>"; };
+		8FFBDEBB22F99811003CED98 /* DeleteTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTableVC.swift; sourceTree = "<group>"; };
 		A55CC34B85CE2A463E670835 /* Pods-Adisyon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adisyon.release.xcconfig"; path = "Target Support Files/Pods-Adisyon/Pods-Adisyon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +60,6 @@
 				5B7F3E72B3EDA87F486570B4 /* Pods-Adisyon.debug.xcconfig */,
 				A55CC34B85CE2A463E670835 /* Pods-Adisyon.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -90,6 +91,7 @@
 				8F8E787D22F1A6AF0045155E /* TablesVC.swift */,
 				8F3CDA4D22F2F0CC000CB4DC /* TablesCollectionViewCell.swift */,
 				8F3CDA4F22F2F90A000CB4DC /* TableSaveVC.swift */,
+				8FFBDEBB22F99811003CED98 /* DeleteTableVC.swift */,
 				8F8E786922F1A00A0045155E /* Main.storyboard */,
 				8F8E786C22F1A00B0045155E /* Assets.xcassets */,
 				8F8E786E22F1A00B0045155E /* LaunchScreen.storyboard */,
@@ -225,6 +227,7 @@
 			files = (
 				8F8E787A22F1A1AF0045155E /* SigUpViewController.swift in Sources */,
 				8F8E787E22F1A6AF0045155E /* TablesVC.swift in Sources */,
+				8FFBDEBC22F99811003CED98 /* DeleteTableVC.swift in Sources */,
 				8F3CDA5022F2F90A000CB4DC /* TableSaveVC.swift in Sources */,
 				8F8E786622F1A00A0045155E /* AppDelegate.swift in Sources */,
 				8F8E787C22F1A45A0045155E /* OrderOrAmountVC.swift in Sources */,

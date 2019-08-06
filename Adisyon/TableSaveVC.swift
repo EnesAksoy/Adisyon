@@ -12,6 +12,7 @@ import FirebaseDatabase
 class TableSaveVC: UIViewController {
 
     @IBOutlet weak var tableName: UITextField!
+    var tableNameArray:[String:String] = [:]
     
     
     override func viewDidLoad() {
@@ -20,11 +21,12 @@ class TableSaveVC: UIViewController {
     
     @IBAction func saveTableButton(_ sender: Any) {
         
+        tableNameArray = ["tableName":tableName.text!]
+        
         if tableName.text == ""{
             showAlert(title: "HATA", message: "Lütfen masa ismini giriniz")
         }else{
-            Database.database().reference().child("TableNames").childByAutoId().setValue(tableName.text)
-            
+       Database.database().reference().child("TableNames").childByAutoId().setValue(tableNameArray)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let tablesVC = storyboard.instantiateViewController(withIdentifier: "TablesVC")
             

@@ -14,19 +14,21 @@ class TablesVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var tablesCollection: UICollectionView!
     
     var tableNamesFromFirebase = [String]()
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-       getDataFromFirebase()
-        // Do any additional setup after loading the view.
+    
+        self.getDataFromFirebase()
+      
     }
     
     func getDataFromFirebase(){
         Database.database().reference().child("TableNames").observe(DataEventType.childAdded) { (snapshot) in
-            self.tableNamesFromFirebase.append(snapshot.value as! String)
+            
+            let values = snapshot.value as! NSDictionary
+            let son = values["tableName"] as! String
+            
+            self.tableNamesFromFirebase.append(son)
             self.tablesCollection.reloadData()
         }
     }

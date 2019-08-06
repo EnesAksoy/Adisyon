@@ -254,6 +254,14 @@
                                     <segue destination="2YK-sv-fib" kind="show" id="t47-3r-RHq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEd-a4-ImK">
+                                <rect key="frame" x="34" y="77" width="146" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Masa Sil"/>
+                                <connections>
+                                    <segue destination="Cne-8T-xjZ" kind="show" id="c2y-Hb-E92"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -320,7 +328,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJn-Xt-qqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4168.115942028986" y="835.71428571428567"/>
+            <point key="canvasLocation" x="3007" y="842"/>
+        </scene>
+        <!--Delete TableVC-->
+        <scene sceneID="7gh-rX-Z7j">
+            <objects>
+                <viewController id="Cne-8T-xjZ" customClass="DeleteTableVC" customModule="Adisyon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0xh-Md-2ck">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kS6-kq-5E1">
+                                <rect key="frame" x="33" y="219" width="349" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pk3-HY-kFz">
+                                <rect key="frame" x="155" y="372" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sil"/>
+                                <connections>
+                                    <action selector="deleteButton:" destination="Cne-8T-xjZ" eventType="touchUpInside" id="BMP-Tk-1eg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qWx-pB-hhf"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableName" destination="kS6-kq-5E1" id="eL4-pY-njs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fEq-nZ-OaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2034.7826086956522" y="1553.5714285714284"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="UsJ-YI-H3N"/>
+    </inferredMetricsTieBreakers>
 </document>
