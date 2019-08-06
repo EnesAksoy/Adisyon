@@ -7,24 +7,54 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class DeleteTableVC: UIViewController {
-
+    
+    
+    @IBOutlet weak var tableName: UITextField!
+    
+    var tableNamesArray = [String] ()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    
+    @IBAction func deleteButton(_ sender: Any) {
+        
+        if tableName.text == "" {
+            showAlert(title: "HATA", message: "Lütfen masa ismini giriniz")
+        }
+        
+        nameMatchingFromFirebase()
 
-        // Do any additional setup after loading the view.
+        Database.database().reference().child("TableNames").queryOrdered(byChild: "tableName").queryEqual(toValue: tableName.text!).observe(.childAdded) { (snapshot) in
+            snapshot.ref.removeValue()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let tablesVC = storyboard.instantiateViewController(withIdentifier: "TablesVC")
+            self.present(tablesVC, animated: true, completion: nil)
+        }
+        
+        
+    }
+    func nameMatchingFromFirebase(){
+        Database.database().reference().child("TableNames").observe(DataEventType.childAdded) { (snapshot) in
+            
+            let values = snapshot.value as! NSDictionary
+            let son = values["tableName"] as! String
+            
+            self.tableNamesArray.append(son)
+            
+            for name in self.tableNamesArray{
+                if self.tableName.text != name {
+                    self.showAlert(title: "HATA", message: "Böyle bir masa yok.")
+                }
+            }
+        }
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -254,9 +254,8 @@
                                     <segue destination="2YK-sv-fib" kind="show" id="t47-3r-RHq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEd-a4-ImK">
-                                <rect key="frame" x="34" y="77" width="146" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEd-a4-ImK">
+                                <rect key="frame" x="20" y="74" width="146" height="30"/>
                                 <state key="normal" title="Masa Sil"/>
                                 <connections>
                                     <segue destination="Cne-8T-xjZ" kind="show" id="c2y-Hb-E92"/>
@@ -268,9 +267,13 @@
                             <constraint firstItem="unD-b6-ySN" firstAttribute="top" secondItem="P6O-Aa-Fk2" secondAttribute="bottom" constant="29" id="0FX-lb-iJw"/>
                             <constraint firstItem="MoU-u1-drS" firstAttribute="bottom" secondItem="unD-b6-ySN" secondAttribute="bottom" constant="10" id="4cn-94-wiM"/>
                             <constraint firstItem="P6O-Aa-Fk2" firstAttribute="leading" secondItem="MoU-u1-drS" secondAttribute="leading" constant="245" id="5eb-Ym-K3p"/>
+                            <constraint firstItem="TEd-a4-ImK" firstAttribute="leading" secondItem="MoU-u1-drS" secondAttribute="leading" constant="20" id="8Gk-fu-O8X"/>
+                            <constraint firstItem="unD-b6-ySN" firstAttribute="top" secondItem="TEd-a4-ImK" secondAttribute="bottom" constant="32" id="I09-4N-2Dg"/>
                             <constraint firstItem="P6O-Aa-Fk2" firstAttribute="trailing" secondItem="ryw-ha-pHh" secondAttribute="trailingMargin" id="OZG-RT-PVe"/>
                             <constraint firstItem="P6O-Aa-Fk2" firstAttribute="top" secondItem="MoU-u1-drS" secondAttribute="top" constant="27" id="ZoI-Oh-eYS"/>
+                            <constraint firstItem="P6O-Aa-Fk2" firstAttribute="leading" secondItem="TEd-a4-ImK" secondAttribute="trailing" constant="79" id="gzu-xE-bkY"/>
                             <constraint firstAttribute="trailing" secondItem="unD-b6-ySN" secondAttribute="trailing" id="jX4-V3-bzv"/>
+                            <constraint firstItem="TEd-a4-ImK" firstAttribute="top" secondItem="MoU-u1-drS" secondAttribute="top" constant="30" id="lWy-LK-m86"/>
                             <constraint firstItem="unD-b6-ySN" firstAttribute="leading" secondItem="ryw-ha-pHh" secondAttribute="leading" id="yOR-u0-9N9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MoU-u1-drS"/>
@@ -338,16 +341,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kS6-kq-5E1">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kS6-kq-5E1">
                                 <rect key="frame" x="33" y="219" width="349" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pk3-HY-kFz">
-                                <rect key="frame" x="155" y="372" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pk3-HY-kFz">
+                                <rect key="frame" x="122" y="403" width="170" height="30"/>
                                 <state key="normal" title="Sil"/>
                                 <connections>
                                     <action selector="deleteButton:" destination="Cne-8T-xjZ" eventType="touchUpInside" id="BMP-Tk-1eg"/>
@@ -355,6 +356,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kS6-kq-5E1" firstAttribute="leading" secondItem="qWx-pB-hhf" secondAttribute="leading" constant="33" id="2t3-Gt-tud"/>
+                            <constraint firstItem="Pk3-HY-kFz" firstAttribute="top" secondItem="kS6-kq-5E1" secondAttribute="bottom" constant="154" id="eCy-VF-XC2"/>
+                            <constraint firstItem="kS6-kq-5E1" firstAttribute="top" secondItem="qWx-pB-hhf" secondAttribute="top" constant="175" id="g9k-Ly-02p"/>
+                            <constraint firstItem="qWx-pB-hhf" firstAttribute="trailing" secondItem="Pk3-HY-kFz" secondAttribute="trailing" constant="122" id="lak-aK-3G7"/>
+                            <constraint firstItem="Pk3-HY-kFz" firstAttribute="leading" secondItem="qWx-pB-hhf" secondAttribute="leading" constant="122" id="nPg-bR-eNt"/>
+                            <constraint firstItem="qWx-pB-hhf" firstAttribute="trailing" secondItem="kS6-kq-5E1" secondAttribute="trailing" constant="32" id="tOO-yu-DeP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qWx-pB-hhf"/>
                     </view>
                     <connections>
