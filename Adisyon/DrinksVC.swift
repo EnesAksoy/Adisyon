@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class DrinksVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
    
@@ -20,15 +21,23 @@ class DrinksVC: UIViewController, UICollectionViewDataSource, UICollectionViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        getDrinkDataFromFirebase()
     }
     
-    @IBAction func addDrinkButton(_ sender: Any) {
+    func getDrinkDataFromFirebase() {
         
-        dismiss(animated: true, completion: nil)
-        
+        Database.database().reference().child("Drinks").observe(.childAdded) { (snapshot) in
+            let snapshotValue = snapshot.value as? NSDictionary
+            let drinkNames = snapshotValue?.allKeys as? [String]
+            
+            for d in drinkNames! {
+                self.drinksNameFromFirebase.append(d)
+            }
+            self.drinkCollection.reloadData()
+        }
     }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    
+      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return drinksNameFromFirebase.count
     }
     

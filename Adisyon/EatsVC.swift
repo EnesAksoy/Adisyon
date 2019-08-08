@@ -36,8 +36,6 @@ class EatsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             }
             self.eatCollection.reloadData()
         }
-        
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
