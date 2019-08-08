@@ -26,9 +26,9 @@ class TablesVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         Database.database().reference().child("TableNames").observe(DataEventType.childAdded) { (snapshot) in
             
             let values = snapshot.value as! NSDictionary
-            let son = values["tableName"] as! String
+            let tableNames = values["tableName"] as! String
             
-            self.tableNamesFromFirebase.append(son)
+            self.tableNamesFromFirebase.append(tableNames)
             self.tablesCollection.reloadData()
         }
     }

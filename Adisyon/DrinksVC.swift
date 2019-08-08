@@ -16,7 +16,7 @@ class DrinksVC: UIViewController, UICollectionViewDataSource, UICollectionViewDe
     
     
     var drinksNameFromFirebase = [String]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +24,8 @@ class DrinksVC: UIViewController, UICollectionViewDataSource, UICollectionViewDe
     }
     
     @IBAction func addDrinkButton(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
         
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

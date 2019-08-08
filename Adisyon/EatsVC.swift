@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class EatsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
    
@@ -19,14 +20,26 @@ class EatsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       getEatDataFromFirebase()
 
-        // Do any additional setup after loading the view.
     }
     
-    
-    @IBAction func addEatsButton(_ sender: Any) {
+    func getEatDataFromFirebase() {
+        
+        Database.database().reference().child("Foods").observe(.childAdded) { (snapshot) in
+            let snapshotValue = snapshot.value as? NSDictionary
+            let foodNames = snapshotValue?.allKeys as? [String]
+        
+            for f in foodNames! {
+                self.eatNamesFromFirebase.append(f)
+            }
+            self.eatCollection.reloadData()
+        }
+        
         
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
        return eatNamesFromFirebase.count
