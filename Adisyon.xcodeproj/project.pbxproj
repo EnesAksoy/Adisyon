@@ -27,6 +27,7 @@
 		8FFBDEC622FAEEDF003CED98 /* DrinkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFBDEC522FAEEDF003CED98 /* DrinkCollectionViewCell.swift */; };
 		8FFBDEC822FC35D6003CED98 /* AddEatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFBDEC722FC35D6003CED98 /* AddEatVC.swift */; };
 		8FFBDECA22FC406F003CED98 /* AddDrinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFBDEC922FC406F003CED98 /* AddDrinkVC.swift */; };
+		8FFBDECC22FDBF32003CED98 /* DeleteFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFBDECB22FDBF32003CED98 /* DeleteFoodVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		8FFBDEC522FAEEDF003CED98 /* DrinkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCollectionViewCell.swift; sourceTree = "<group>"; };
 		8FFBDEC722FC35D6003CED98 /* AddEatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEatVC.swift; sourceTree = "<group>"; };
 		8FFBDEC922FC406F003CED98 /* AddDrinkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrinkVC.swift; sourceTree = "<group>"; };
+		8FFBDECB22FDBF32003CED98 /* DeleteFoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFoodVC.swift; sourceTree = "<group>"; };
 		A55CC34B85CE2A463E670835 /* Pods-Adisyon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adisyon.release.xcconfig"; path = "Target Support Files/Pods-Adisyon/Pods-Adisyon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 				8FFBDEBF22FAEDAD003CED98 /* EatsVC.swift */,
 				8FFBDEC722FC35D6003CED98 /* AddEatVC.swift */,
 				8FFBDEC322FAEEB9003CED98 /* EatCollectionViewCell.swift */,
+				8FFBDECB22FDBF32003CED98 /* DeleteFoodVC.swift */,
 				8FFBDEC122FAEDC5003CED98 /* DrinksVC.swift */,
 				8FFBDEC922FC406F003CED98 /* AddDrinkVC.swift */,
 				8FFBDEC522FAEEDF003CED98 /* DrinkCollectionViewCell.swift */,
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F8E787A22F1A1AF0045155E /* SigUpViewController.swift in Sources */,
+				8FFBDECC22FDBF32003CED98 /* DeleteFoodVC.swift in Sources */,
 				8FFBDEC022FAEDAD003CED98 /* EatsVC.swift in Sources */,
 				8F8E787E22F1A6AF0045155E /* TablesVC.swift in Sources */,
 				8FFBDEC222FAEDC5003CED98 /* DrinksVC.swift in Sources */,

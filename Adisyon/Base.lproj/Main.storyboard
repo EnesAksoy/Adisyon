@@ -379,6 +379,50 @@
             </objects>
             <point key="canvasLocation" x="5228.985507246377" y="-41.517857142857139"/>
         </scene>
+        <!--Delete FoodVC-->
+        <scene sceneID="Dq1-es-csa">
+            <objects>
+                <viewController id="hgY-wH-gYk" customClass="DeleteFoodVC" customModule="Adisyon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oFz-33-P3f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sA-im-qhH">
+                                <rect key="frame" x="144" y="427" width="126" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="7LG-n1-XHh"/>
+                                </constraints>
+                                <state key="normal" title="Sil"/>
+                                <connections>
+                                    <action selector="deleteFoodButton:" destination="hgY-wH-gYk" eventType="touchUpInside" id="XZd-jd-4TV"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lütfen yiyecek ismi giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IcN-ZJ-pQb">
+                                <rect key="frame" x="56" y="220" width="302" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IcN-ZJ-pQb" firstAttribute="centerX" secondItem="3sA-im-qhH" secondAttribute="centerX" id="ege-jJ-ETo"/>
+                            <constraint firstItem="3sA-im-qhH" firstAttribute="leading" secondItem="oKd-lI-WxC" secondAttribute="leading" constant="144" id="frW-NR-DTk"/>
+                            <constraint firstItem="IcN-ZJ-pQb" firstAttribute="leading" secondItem="oKd-lI-WxC" secondAttribute="leading" constant="56" id="hWe-mG-RVU"/>
+                            <constraint firstItem="IcN-ZJ-pQb" firstAttribute="centerX" secondItem="oFz-33-P3f" secondAttribute="centerX" id="pkI-NU-VOt"/>
+                            <constraint firstItem="oKd-lI-WxC" firstAttribute="bottom" secondItem="3sA-im-qhH" secondAttribute="bottom" constant="351" id="rER-li-7go"/>
+                            <constraint firstItem="IcN-ZJ-pQb" firstAttribute="top" secondItem="oKd-lI-WxC" secondAttribute="top" constant="132" id="zCA-Cv-UEP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oKd-lI-WxC"/>
+                    </view>
+                    <connections>
+                        <outlet property="foodName" destination="IcN-ZJ-pQb" id="Rc1-f1-4M0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lio-bP-1Ol" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7369.5652173913049" y="-1145.0892857142856"/>
+        </scene>
         <!--EatsVC-->
         <scene sceneID="QsL-bV-xTw">
             <objects>
@@ -435,6 +479,14 @@
                                     <segue destination="kPQ-n4-76y" kind="show" id="8PV-L4-e9o"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOs-Lk-U13">
+                                <rect key="frame" x="20" y="111" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Yiyecek Sil"/>
+                                <connections>
+                                    <segue destination="hgY-wH-gYk" kind="show" id="AiH-dT-pdN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -472,7 +524,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yiyecek İsmi Giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bbZ-gy-x9m">
-                                <rect key="frame" x="44" y="188" width="326" height="30"/>
+                                <rect key="frame" x="44" y="232" width="326" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -663,10 +715,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kS6-kq-5E1">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lütfen masa ismi giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kS6-kq-5E1">
                                 <rect key="frame" x="33" y="219" width="349" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pk3-HY-kFz">

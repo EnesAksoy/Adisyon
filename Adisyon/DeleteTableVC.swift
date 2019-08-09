@@ -43,9 +43,9 @@ class DeleteTableVC: UIViewController {
         Database.database().reference().child("TableNames").observe(DataEventType.childAdded) { (snapshot) in
             
             let values = snapshot.value as! NSDictionary
-            let son = values["tableName"] as! String
+            let tableNames = values["tableName"] as! String
             
-            self.tableNamesArray.append(son)
+            self.tableNamesArray.append(tableNames)
             
             for name in self.tableNamesArray{
                 if self.tableName.text != name {
