@@ -26,9 +26,10 @@ class DeleteTableVC: UIViewController {
         
         if tableName.text == "" {
             showAlert(title: "HATA", message: "Lütfen masa ismini giriniz")
-        }
-        
+        }else{
+            
         nameMatchingFromFirebase()
+            
 
         Database.database().reference().child("TableNames").queryOrdered(byChild: "tableName").queryEqual(toValue: tableName.text!).observe(.childAdded) { (snapshot) in
             snapshot.ref.removeValue()
@@ -36,8 +37,7 @@ class DeleteTableVC: UIViewController {
             let tablesVC = storyboard.instantiateViewController(withIdentifier: "TablesVC")
             self.present(tablesVC, animated: true, completion: nil)
         }
-        
-        
+      }
     }
     func nameMatchingFromFirebase(){
         Database.database().reference().child("TableNames").observe(DataEventType.childAdded) { (snapshot) in
@@ -47,11 +47,11 @@ class DeleteTableVC: UIViewController {
             
             self.tableNamesArray.append(tableNames)
             
-            for name in self.tableNamesArray{
-                if self.tableName.text != name {
-                    self.showAlert(title: "HATA", message: "Böyle bir masa yok.")
-                }
-            }
+//            for name in self.tableNamesArray{
+//                if self.tableName.text != name {
+//                    self.showAlert(title: "HATA", message: "Böyle bir masa yok.")
+//                }
+//            }
         }
     }
     
