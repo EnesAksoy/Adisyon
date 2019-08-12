@@ -28,6 +28,7 @@
 		8FFBDEC822FC35D6003CED98 /* AddEatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFBDEC722FC35D6003CED98 /* AddEatVC.swift */; };
 		8FFBDECA22FC406F003CED98 /* AddDrinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFBDEC922FC406F003CED98 /* AddDrinkVC.swift */; };
 		8FFBDECC22FDBF32003CED98 /* DeleteFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFBDECB22FDBF32003CED98 /* DeleteFoodVC.swift */; };
+		8FFBDECE230186D5003CED98 /* DeleteDrinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFBDECD230186D5003CED98 /* DeleteDrinkVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		8FFBDEC722FC35D6003CED98 /* AddEatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEatVC.swift; sourceTree = "<group>"; };
 		8FFBDEC922FC406F003CED98 /* AddDrinkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrinkVC.swift; sourceTree = "<group>"; };
 		8FFBDECB22FDBF32003CED98 /* DeleteFoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFoodVC.swift; sourceTree = "<group>"; };
+		8FFBDECD230186D5003CED98 /* DeleteDrinkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDrinkVC.swift; sourceTree = "<group>"; };
 		A55CC34B85CE2A463E670835 /* Pods-Adisyon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adisyon.release.xcconfig"; path = "Target Support Files/Pods-Adisyon/Pods-Adisyon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +118,7 @@
 				8FFBDEC122FAEDC5003CED98 /* DrinksVC.swift */,
 				8FFBDEC922FC406F003CED98 /* AddDrinkVC.swift */,
 				8FFBDEC522FAEEDF003CED98 /* DrinkCollectionViewCell.swift */,
+				8FFBDECD230186D5003CED98 /* DeleteDrinkVC.swift */,
 				8F8E786922F1A00A0045155E /* Main.storyboard */,
 				8F8E786C22F1A00B0045155E /* Assets.xcassets */,
 				8F8E786E22F1A00B0045155E /* LaunchScreen.storyboard */,
@@ -249,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FFBDECE230186D5003CED98 /* DeleteDrinkVC.swift in Sources */,
 				8F8E787A22F1A1AF0045155E /* SigUpViewController.swift in Sources */,
 				8FFBDECC22FDBF32003CED98 /* DeleteFoodVC.swift in Sources */,
 				8FFBDEC022FAEDAD003CED98 /* EatsVC.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e1Z-ob-QPc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EsN-5v-PdS">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -192,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yrz-NY-NIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075" y="1554"/>
+            <point key="canvasLocation" x="-138" y="1576"/>
         </scene>
         <!--TablesVC-->
         <scene sceneID="Pv0-2Z-RyU">
@@ -285,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTX-EX-sV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2944.9275362318845" y="827.67857142857144"/>
+            <point key="canvasLocation" x="725" y="869"/>
         </scene>
         <!--Table SaveVC-->
         <scene sceneID="kah-Ob-kXS">
@@ -330,7 +330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJn-Xt-qqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3915.9420289855075" y="841.74107142857144"/>
+            <point key="canvasLocation" x="1738" y="869"/>
         </scene>
         <!--Select Eats And DrinksVC-->
         <scene sceneID="PIO-Yi-OkY">
@@ -351,7 +351,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZ7-nc-pc6">
-                                <rect key="frame" x="135" y="185" width="144" height="46"/>
+                                <rect key="frame" x="135" y="229" width="144" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="Gbw-IZ-KWn"/>
                                 </constraints>
@@ -434,7 +434,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lio-bP-1Ol" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7369.5652173913049" y="-1145.0892857142856"/>
+            <point key="canvasLocation" x="7345" y="-1159"/>
         </scene>
         <!--EatsVC-->
         <scene sceneID="QsL-bV-xTw">
@@ -470,10 +470,10 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="qsE-BE-agA" firstAttribute="centerY" secondItem="71c-nW-6g5" secondAttribute="centerY" id="9s1-jx-2Z2"/>
-                                            <constraint firstItem="qsE-BE-agA" firstAttribute="centerX" secondItem="71c-nW-6g5" secondAttribute="centerX" id="HXw-Tf-pMD"/>
-                                            <constraint firstItem="qsE-BE-agA" firstAttribute="leading" secondItem="71c-nW-6g5" secondAttribute="leadingMargin" constant="-6" id="bO4-gW-AUu"/>
-                                            <constraint firstItem="qsE-BE-agA" firstAttribute="top" secondItem="71c-nW-6g5" secondAttribute="topMargin" constant="-34" id="wQ3-JM-bBe"/>
+                                            <constraint firstItem="qsE-BE-agA" firstAttribute="centerX" secondItem="71c-nW-6g5" secondAttribute="centerX" id="0b3-8R-L8L"/>
+                                            <constraint firstItem="qsE-BE-agA" firstAttribute="top" secondItem="71c-nW-6g5" secondAttribute="topMargin" constant="-34" id="8M9-KH-qBh"/>
+                                            <constraint firstItem="qsE-BE-agA" firstAttribute="leading" secondItem="71c-nW-6g5" secondAttribute="leadingMargin" constant="-6" id="MEg-Sh-6k9"/>
+                                            <constraint firstItem="qsE-BE-agA" firstAttribute="centerY" secondItem="71c-nW-6g5" secondAttribute="centerY" id="nQY-8G-s2n"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="eatName" destination="qsE-BE-agA" id="QHy-DD-6jc"/>
@@ -487,14 +487,19 @@
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezv-uK-ryz">
                                 <rect key="frame" x="266" y="111" width="133" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="vlo-16-Aae"/>
+                                </constraints>
                                 <state key="normal" title="Yiyecek Ekle"/>
                                 <connections>
                                     <segue destination="kPQ-n4-76y" kind="show" id="8PV-L4-e9o"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOs-Lk-U13">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOs-Lk-U13">
                                 <rect key="frame" x="20" y="111" width="133" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="yXh-YG-hDd"/>
+                                </constraints>
                                 <state key="normal" title="Yiyecek Sil"/>
                                 <connections>
                                     <segue destination="hgY-wH-gYk" kind="show" id="AiH-dT-pdN"/>
@@ -503,24 +508,31 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ezv-uK-ryz" firstAttribute="leading" secondItem="RB0-0b-Y1H" secondAttribute="leading" constant="266" id="8rB-qc-HsK"/>
-                            <constraint firstItem="CUK-vr-tYy" firstAttribute="top" secondItem="ezv-uK-ryz" secondAttribute="bottom" constant="40" id="99l-br-rJy"/>
-                            <constraint firstItem="CUK-vr-tYy" firstAttribute="centerY" secondItem="J6x-jP-wce" secondAttribute="centerY" id="DJd-fI-gbc"/>
-                            <constraint firstItem="CUK-vr-tYy" firstAttribute="leading" secondItem="J6x-jP-wce" secondAttribute="leadingMargin" id="Jcy-t4-pUS"/>
-                            <constraint firstItem="RB0-0b-Y1H" firstAttribute="trailing" secondItem="ezv-uK-ryz" secondAttribute="trailing" constant="15" id="Spw-af-RRA"/>
-                            <constraint firstItem="CUK-vr-tYy" firstAttribute="trailing" secondItem="J6x-jP-wce" secondAttribute="trailingMargin" id="Ybg-wm-y8X"/>
-                            <constraint firstItem="ezv-uK-ryz" firstAttribute="top" secondItem="RB0-0b-Y1H" secondAttribute="top" constant="23" id="kyK-X7-g8g"/>
+                            <constraint firstItem="SOs-Lk-U13" firstAttribute="leading" secondItem="CUK-vr-tYy" secondAttribute="leading" id="80V-fL-rm9"/>
+                            <constraint firstItem="CUK-vr-tYy" firstAttribute="centerY" secondItem="J6x-jP-wce" secondAttribute="centerY" id="80Y-62-VAG"/>
+                            <constraint firstItem="SOs-Lk-U13" firstAttribute="top" secondItem="RB0-0b-Y1H" secondAttribute="top" constant="23" id="Acm-y8-f1A"/>
+                            <constraint firstItem="CUK-vr-tYy" firstAttribute="trailing" secondItem="J6x-jP-wce" secondAttribute="trailingMargin" id="HIc-eC-t8G"/>
+                            <constraint firstItem="SOs-Lk-U13" firstAttribute="leading" secondItem="J6x-jP-wce" secondAttribute="leadingMargin" id="ad1-zy-dfU"/>
+                            <constraint firstItem="CUK-vr-tYy" firstAttribute="top" secondItem="SOs-Lk-U13" secondAttribute="bottom" constant="40" id="opL-xg-xv7"/>
+                            <constraint firstItem="RB0-0b-Y1H" firstAttribute="trailing" secondItem="ezv-uK-ryz" secondAttribute="trailing" constant="15" id="vuM-QC-tgA"/>
+                            <constraint firstItem="SOs-Lk-U13" firstAttribute="baseline" secondItem="ezv-uK-ryz" secondAttribute="baseline" id="w8Z-uU-vTY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RB0-0b-Y1H"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zR4-Se-xNW"/>
+                    <navigationItem key="navigationItem" id="zR4-Se-xNW">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6L0-ni-YTY">
+                            <connections>
+                                <segue destination="EsN-5v-PdS" kind="show" id="GvY-ka-kdD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="eatCollection" destination="CUK-vr-tYy" id="VKO-jb-gHj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t1I-ky-JgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7370" y="-429"/>
+            <point key="canvasLocation" x="6206" y="-837"/>
         </scene>
         <!--Add EatVC-->
         <scene sceneID="XCT-JS-M7m">
@@ -574,7 +586,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5f-9M-TuS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8191.3043478260879" y="-429.24107142857139"/>
+            <point key="canvasLocation" x="7345" y="-397"/>
         </scene>
         <!--DrinksVC-->
         <scene sceneID="5n4-MD-Zmd">
@@ -610,10 +622,10 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="NO3-WJ-7zb" firstAttribute="centerX" secondItem="13Z-tB-qmE" secondAttribute="centerX" id="0Br-Qy-cQC"/>
-                                            <constraint firstItem="NO3-WJ-7zb" firstAttribute="top" secondItem="13Z-tB-qmE" secondAttribute="topMargin" constant="-34" id="3Qv-2m-jtV"/>
-                                            <constraint firstItem="NO3-WJ-7zb" firstAttribute="leading" secondItem="13Z-tB-qmE" secondAttribute="leadingMargin" constant="-6" id="KDu-V2-iLI"/>
-                                            <constraint firstItem="NO3-WJ-7zb" firstAttribute="centerY" secondItem="13Z-tB-qmE" secondAttribute="centerY" id="WgF-AE-i4w"/>
+                                            <constraint firstItem="NO3-WJ-7zb" firstAttribute="centerY" secondItem="13Z-tB-qmE" secondAttribute="centerY" id="19t-zG-yFm"/>
+                                            <constraint firstItem="NO3-WJ-7zb" firstAttribute="leading" secondItem="13Z-tB-qmE" secondAttribute="leadingMargin" constant="-6" id="IeA-5i-Cir"/>
+                                            <constraint firstItem="NO3-WJ-7zb" firstAttribute="centerX" secondItem="13Z-tB-qmE" secondAttribute="centerX" id="J5F-7u-rAP"/>
+                                            <constraint firstItem="NO3-WJ-7zb" firstAttribute="top" secondItem="13Z-tB-qmE" secondAttribute="topMargin" constant="-34" id="RzW-Oo-cht"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="drinkName" destination="NO3-WJ-7zb" id="Om1-ms-Ajj"/>
@@ -627,28 +639,42 @@
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xw-d4-gJU">
                                 <rect key="frame" x="266" y="111" width="133" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="Gwl-Zd-Lyb"/>
+                                </constraints>
                                 <state key="normal" title="İçecek Ekle"/>
                                 <connections>
                                     <segue destination="Ai9-fj-GvF" kind="show" id="w1m-5N-g3M"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8M-vq-KYs">
+                                <rect key="frame" x="20" y="111" width="133" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="rwY-be-Kpy"/>
+                                </constraints>
+                                <state key="normal" title="İçecek Sil"/>
+                                <connections>
+                                    <segue destination="77J-35-9TQ" kind="show" id="GD7-l3-IKZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0xw-d4-gJU" firstAttribute="leading" secondItem="wPi-4d-bf6" secondAttribute="leading" constant="266" id="8ou-oS-k0W"/>
-                            <constraint firstItem="azM-Z0-Rw3" firstAttribute="leading" secondItem="T72-Rr-2Pf" secondAttribute="leadingMargin" id="Kzh-ff-cce"/>
-                            <constraint firstItem="azM-Z0-Rw3" firstAttribute="trailing" secondItem="T72-Rr-2Pf" secondAttribute="trailingMargin" id="QuM-kt-ylK"/>
-                            <constraint firstItem="wPi-4d-bf6" firstAttribute="trailing" secondItem="0xw-d4-gJU" secondAttribute="trailing" constant="15" id="ZOL-lQ-o8C"/>
-                            <constraint firstItem="0xw-d4-gJU" firstAttribute="top" secondItem="wPi-4d-bf6" secondAttribute="top" constant="23" id="awL-48-IUj"/>
-                            <constraint firstItem="azM-Z0-Rw3" firstAttribute="centerY" secondItem="T72-Rr-2Pf" secondAttribute="centerY" id="kSd-5V-ICh"/>
-                            <constraint firstItem="azM-Z0-Rw3" firstAttribute="top" secondItem="0xw-d4-gJU" secondAttribute="bottom" constant="40" id="nCt-GO-ogr"/>
+                            <constraint firstItem="wPi-4d-bf6" firstAttribute="trailing" secondItem="0xw-d4-gJU" secondAttribute="trailing" constant="15" id="Pos-nI-GJI"/>
+                            <constraint firstItem="n8M-vq-KYs" firstAttribute="leading" secondItem="T72-Rr-2Pf" secondAttribute="leadingMargin" id="YWI-PQ-2kz"/>
+                            <constraint firstItem="azM-Z0-Rw3" firstAttribute="trailing" secondItem="T72-Rr-2Pf" secondAttribute="trailingMargin" id="ge1-MA-61H"/>
+                            <constraint firstItem="n8M-vq-KYs" firstAttribute="leading" secondItem="azM-Z0-Rw3" secondAttribute="leading" id="qr0-VE-lMg"/>
+                            <constraint firstItem="n8M-vq-KYs" firstAttribute="baseline" secondItem="0xw-d4-gJU" secondAttribute="baseline" id="rZ1-3V-ZFx"/>
+                            <constraint firstItem="azM-Z0-Rw3" firstAttribute="top" secondItem="n8M-vq-KYs" secondAttribute="bottom" constant="40" id="toM-MG-V2d"/>
+                            <constraint firstItem="n8M-vq-KYs" firstAttribute="top" secondItem="wPi-4d-bf6" secondAttribute="top" constant="23" id="vx7-LN-pp5"/>
+                            <constraint firstItem="azM-Z0-Rw3" firstAttribute="centerY" secondItem="T72-Rr-2Pf" secondAttribute="centerY" id="wgb-gO-iQX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wPi-4d-bf6"/>
                     </view>
                     <navigationItem key="navigationItem" id="GV6-ZI-bVX">
-                        <barButtonItem key="leftBarButtonItem" title="Geri" id="RdF-ZU-6uP">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fwi-bD-TaF">
                             <connections>
-                                <segue destination="lKD-Sc-o1F" kind="show" id="tid-vj-qTM"/>
+                                <segue destination="EsN-5v-PdS" kind="show" id="hWy-VG-9Qb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -658,7 +684,61 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sxw-6e-aAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8281.1594202898559" y="285.9375"/>
+            <point key="canvasLocation" x="6207" y="828"/>
+        </scene>
+        <!--Delete DrinkVC-->
+        <scene sceneID="heq-g2-A9i">
+            <objects>
+                <viewController id="77J-35-9TQ" customClass="DeleteDrinkVC" customModule="Adisyon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K7F-5j-zrh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lütfen İçecek İsmi Giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCc-0a-QON">
+                                <rect key="frame" x="44" y="188" width="326" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lütfen İçecek Tutarını Giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="htj-ea-VFM">
+                                <rect key="frame" x="44" y="327" width="326" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSO-0S-T6G">
+                                <rect key="frame" x="151" y="488" width="112" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="FMa-h4-xhx"/>
+                                </constraints>
+                                <state key="normal" title="Sil"/>
+                                <connections>
+                                    <action selector="deleteButton:" destination="77J-35-9TQ" eventType="touchUpInside" id="sOe-Wj-61P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="htj-ea-VFM" firstAttribute="centerX" secondItem="MSO-0S-T6G" secondAttribute="centerX" id="48V-Cy-uhg"/>
+                            <constraint firstItem="fCc-0a-QON" firstAttribute="leading" secondItem="htj-ea-VFM" secondAttribute="leading" id="6TA-za-dFc"/>
+                            <constraint firstItem="fCc-0a-QON" firstAttribute="top" secondItem="EcU-Zs-bah" secondAttribute="top" constant="100" id="7Uf-vx-6lM"/>
+                            <constraint firstItem="fCc-0a-QON" firstAttribute="leading" secondItem="EcU-Zs-bah" secondAttribute="leading" constant="44" id="C68-xR-CYm"/>
+                            <constraint firstItem="htj-ea-VFM" firstAttribute="top" secondItem="K7F-5j-zrh" secondAttribute="top" constant="327" id="EE7-Gn-xWJ"/>
+                            <constraint firstItem="MSO-0S-T6G" firstAttribute="leading" secondItem="EcU-Zs-bah" secondAttribute="leading" constant="151" id="W3W-RJ-aPY"/>
+                            <constraint firstItem="fCc-0a-QON" firstAttribute="trailing" secondItem="htj-ea-VFM" secondAttribute="trailing" id="YCl-Vd-7Ty"/>
+                            <constraint firstItem="fCc-0a-QON" firstAttribute="centerX" secondItem="K7F-5j-zrh" secondAttribute="centerX" id="b1p-6O-5me"/>
+                            <constraint firstItem="EcU-Zs-bah" firstAttribute="bottom" secondItem="MSO-0S-T6G" secondAttribute="bottom" constant="290" id="c4o-Md-7Vw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EcU-Zs-bah"/>
+                    </view>
+                    <connections>
+                        <outlet property="drinkAmount" destination="htj-ea-VFM" id="cEn-bm-UrO"/>
+                        <outlet property="drinkName" destination="fCc-0a-QON" id="AVB-gB-FoN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mno-mw-zRA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7345" y="1165"/>
         </scene>
         <!--Add DrinkVC-->
         <scene sceneID="1P0-ar-Brb">
@@ -712,7 +792,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJr-mg-bjb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9100" y="285.9375"/>
+            <point key="canvasLocation" x="7345" y="406"/>
         </scene>
         <!--Delete TableVC-->
         <scene sceneID="7gh-rX-Z7j">
@@ -753,7 +833,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fEq-nZ-OaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2034.7826086956522" y="1553.5714285714284"/>
+            <point key="canvasLocation" x="725" y="1576"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="X3V-rj-8oy">
@@ -789,7 +869,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ENj-u4-lez" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6460.8695652173919" y="-429.24107142857139"/>
+            <point key="canvasLocation" x="5229" y="-837"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V7d-wT-FIv">
@@ -807,7 +887,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WM0-Ly-TUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7371.0144927536239" y="285.9375"/>
+            <point key="canvasLocation" x="5229" y="828"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DCX-Oz-2S7">
@@ -825,11 +905,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pf5-po-5Av" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2034.7826086956522" y="827.67857142857144"/>
+            <point key="canvasLocation" x="-139" y="869"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UsJ-YI-H3N"/>
-        <segue reference="tid-vj-qTM"/>
+        <segue reference="rnv-7G-72O"/>
+        <segue reference="GvY-ka-kdD"/>
     </inferredMetricsTieBreakers>
 </document>

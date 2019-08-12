@@ -14,7 +14,7 @@ class DeleteTableVC: UIViewController {
     
     @IBOutlet weak var tableName: UITextField!
     
-    var tableNamesArray = [String] ()
+    //var tableNamesArray = [String] ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +28,10 @@ class DeleteTableVC: UIViewController {
             showAlert(title: "HATA", message: "Lütfen masa ismini giriniz")
         }else{
             
-        nameMatchingFromFirebase()
+           // nameMatchingFromFirebase()
             
 
-        Database.database().reference().child("TableNames").queryOrdered(byChild: "tableName").queryEqual(toValue: tableName.text!).observe(.childAdded) { (snapshot) in
+            Database.database().reference().child("TableNames").queryOrdered(byChild: "tableName").queryEqual(toValue: tableName.text!).observe(.childAdded) { (snapshot) in
             snapshot.ref.removeValue()
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let tablesVC = storyboard.instantiateViewController(withIdentifier: "TablesVC")
@@ -39,21 +39,21 @@ class DeleteTableVC: UIViewController {
         }
       }
     }
-    func nameMatchingFromFirebase(){
-        Database.database().reference().child("TableNames").observe(DataEventType.childAdded) { (snapshot) in
-            
-            let values = snapshot.value as! NSDictionary
-            let tableNames = values["tableName"] as! String
-            
-            self.tableNamesArray.append(tableNames)
-            
-//            for name in self.tableNamesArray{
-//                if self.tableName.text != name {
-//                    self.showAlert(title: "HATA", message: "Böyle bir masa yok.")
-//                }
-//            }
-        }
-    }
+//    func nameMatchingFromFirebase(){
+//        Database.database().reference().child("TableNames").observe(DataEventType.childAdded) { (snapshot) in
+//
+//            let values = snapshot.value as! NSDictionary
+//            let tableNames = values["tableName"] as! String
+//
+//            self.tableNamesArray.append(tableNames)
+//
+////            for name in self.tableNamesArray{
+////                if self.tableName.text != name {
+////                    self.showAlert(title: "HATA", message: "Böyle bir masa yok.")
+////                }
+////            }
+//        }
+//    }
     
 
 
