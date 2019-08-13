@@ -14,6 +14,7 @@ class TablesVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var tablesCollection: UICollectionView!
     
     var tableNamesFromFirebase = [String]()
+    var nameInCell = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,4 +58,20 @@ class TablesVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.backgroundColor = UIColor.green
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
+        nameInCell = tableNamesFromFirebase[indexPath.row]
+        
+        performSegue(withIdentifier: "selectedTable", sender: nil)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "selectedTable"{
+            let selectedTable = segue.destination as! SelectEatsAndDrinksVC
+            selectedTable.name = nameInCell
+        }
+    }    
 }

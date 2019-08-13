@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EsN-5v-PdS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u4F-yZ-rbH">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -86,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+            <point key="canvasLocation" x="-496" y="-1191"/>
         </scene>
         <!--Sig Up View Controller-->
         <scene sceneID="98c-Yn-1Rm">
@@ -147,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bez-gN-PQ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075.3623188405797" y="11.383928571428571"/>
+            <point key="canvasLocation" x="725" y="-1191"/>
         </scene>
         <!--Order Or AmountVC-->
         <scene sceneID="56g-SS-ovS">
@@ -158,13 +158,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Oi-P7-FUv">
-                                <rect key="frame" x="130" y="254" width="154" height="88"/>
+                                <rect key="frame" x="130" y="298" width="154" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="lJR-yR-Kbg"/>
                                 </constraints>
                                 <state key="normal" title="Sipariş"/>
                                 <connections>
                                     <action selector="order:" destination="JWb-gf-3dE" eventType="touchUpInside" id="Gdr-wb-Px1"/>
+                                    <segue destination="Te2-hM-xVV" kind="show" id="vVK-OP-9gg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZR-KP-lkr">
@@ -189,10 +190,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Tg-jk-LW6"/>
                     </view>
+                    <navigationItem key="navigationItem" id="GMU-bd-eWx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yrz-NY-NIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-138" y="1576"/>
+            <point key="canvasLocation" x="725" y="51"/>
         </scene>
         <!--TablesVC-->
         <scene sceneID="Pv0-2Z-RyU">
@@ -281,6 +283,7 @@
                     <navigationItem key="navigationItem" id="j3h-nl-mIm"/>
                     <connections>
                         <outlet property="tablesCollection" destination="unD-b6-ySN" id="diT-im-CMf"/>
+                        <segue destination="lKD-Sc-o1F" kind="show" identifier="selectedTable" id="xPl-hH-Ko2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTX-EX-sV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -335,7 +338,7 @@
         <!--Select Eats And DrinksVC-->
         <scene sceneID="PIO-Yi-OkY">
             <objects>
-                <viewController id="lKD-Sc-o1F" customClass="SelectEatsAndDrinksVC" customModule="Adisyon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectEatsAndDrinksVC" id="lKD-Sc-o1F" customClass="SelectEatsAndDrinksVC" customModule="Adisyon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xsw-qN-2ny">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -347,6 +350,7 @@
                                 </constraints>
                                 <state key="normal" title="İçecekler"/>
                                 <connections>
+                                    <action selector="selectDrinkButton:" destination="lKD-Sc-o1F" eventType="touchUpInside" id="F2q-SO-Rxa"/>
                                     <segue destination="3Mr-Ek-pP9" kind="show" id="dj2-Wj-SPL"/>
                                 </connections>
                             </button>
@@ -357,7 +361,7 @@
                                 </constraints>
                                 <state key="normal" title="Yiyecek"/>
                                 <connections>
-                                    <segue destination="AQo-5N-VoT" kind="show" id="m6I-hn-aEQ"/>
+                                    <action selector="selectEatButton:" destination="lKD-Sc-o1F" eventType="touchUpInside" id="df8-9R-hhC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -373,6 +377,9 @@
                         <viewLayoutGuide key="safeArea" id="W8x-Mu-ehz"/>
                     </view>
                     <navigationItem key="navigationItem" id="kMs-21-BJR"/>
+                    <connections>
+                        <segue destination="e1Z-ob-QPc" kind="show" identifier="SelectToEat" id="6uK-YQ-nfk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hr1-O0-Ks9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -522,7 +529,7 @@
                     <navigationItem key="navigationItem" id="zR4-Se-xNW">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6L0-ni-YTY">
                             <connections>
-                                <segue destination="EsN-5v-PdS" kind="show" id="GvY-ka-kdD"/>
+                                <segue destination="u4F-yZ-rbH" kind="show" id="UNd-e9-xat"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -674,7 +681,7 @@
                     <navigationItem key="navigationItem" id="GV6-ZI-bVX">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fwi-bD-TaF">
                             <connections>
-                                <segue destination="EsN-5v-PdS" kind="show" id="hWy-VG-9Qb"/>
+                                <segue destination="u4F-yZ-rbH" kind="show" id="Mmv-0W-hbG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -907,9 +914,30 @@
             </objects>
             <point key="canvasLocation" x="-139" y="869"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uhK-nI-9BN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1W4-fo-8r0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fo0-QK-cW6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JWb-gf-3dE" kind="relationship" relationship="rootViewController" id="HqK-HY-06Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5k-ET-tcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-139" y="51"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="rnv-7G-72O"/>
-        <segue reference="GvY-ka-kdD"/>
+        <segue reference="Mmv-0W-hbG"/>
+        <segue reference="6uK-YQ-nfk"/>
+        <segue reference="xPl-hH-Ko2"/>
+        <segue reference="vVK-OP-9gg"/>
     </inferredMetricsTieBreakers>
 </document>

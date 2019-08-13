@@ -9,13 +9,28 @@
 import UIKit
 
 class SelectEatsAndDrinksVC: UIViewController {
+    
+    var name = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //print("name==== \(name)")
+    }
+    @IBAction func selectEatButton(_ sender: Any) {
+        performSegue(withIdentifier: "SelectToEat", sender: nil)
     }
     
+    @IBAction func selectDrinkButton(_ sender: Any) {
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SelectToEat" {
+            let selectToEat = segue.destination as! EatsVC
+            selectToEat.selectedTableName = name
+            
+        }
+    }
     
 
 
