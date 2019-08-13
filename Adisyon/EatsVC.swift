@@ -16,13 +16,25 @@ class EatsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     
     var eatNamesFromFirebase = [String]()
-    
+    var selectedTableName = ""
+    var savedOrderFirebase:[String:String] = [:]
+    var snapshotValue = NSDictionary ()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        getSnapshotValue()
+        
+        print("namee=====\(selectedTableName)")
        getEatDataFromFirebase()
 
+    }
+    func getSnapshotValue() {
+        Database.database().reference().child("Foods").observe(.childAdded) { (snapshot) in
+            self.snapshotValue = snapshot.value as! NSDictionary
+            print(self.snapshotValue)
+        }
+      
     }
     
     func getEatDataFromFirebase() {
@@ -30,7 +42,6 @@ class EatsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         Database.database().reference().child("Foods").observe(.childAdded) { (snapshot) in
             let snapshotValue = snapshot.value as? NSDictionary
             let foodNames = snapshotValue?.allKeys as? [String]
-        
             for f in foodNames! {
                 self.eatNamesFromFirebase.append(f)
             }
@@ -64,7 +75,13 @@ class EatsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         cell?.backgroundColor = UIColor.gray
     }
     
-    
-
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let nameInCell = eatNamesFromFirebase[indexPath.row]
+            if let value = self.snapshotValue.value(forKey: nameInCell) {
+                self.savedOrderFirebase = [nameInCell:value] as! [String : String]
+            }
+           print(indexPath.row)
+            print(self.savedOrderFirebase)
+           // Database.database().reference().child("Ordered").child(self.selectedTableName)
+        }
 }
