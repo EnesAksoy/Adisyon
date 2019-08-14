@@ -17,22 +17,18 @@ class EatsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     var eatNamesFromFirebase = [String]()
     var selectedTableName = ""
-    var savedOrderFirebase:[String:String] = [:]
-    var snapshotValue = NSDictionary ()
+    var foods : [DataSnapshot] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         getSnapshotValue()
-        
-        print("namee=====\(selectedTableName)")
-       getEatDataFromFirebase()
+        getEatDataFromFirebase()
 
     }
     func getSnapshotValue() {
         Database.database().reference().child("Foods").observe(.childAdded) { (snapshot) in
-            self.snapshotValue = snapshot.value as! NSDictionary
-            print(self.snapshotValue)
+            self.foods.append(snapshot)
         }
       
     }
@@ -50,10 +46,8 @@ class EatsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
        return eatNamesFromFirebase.count
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
          let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eatCell", for: indexPath) as! EatCollectionViewCell
@@ -76,12 +70,9 @@ class EatsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let nameInCell = eatNamesFromFirebase[indexPath.row]
-            if let value = self.snapshotValue.value(forKey: nameInCell) {
-                self.savedOrderFirebase = [nameInCell:value] as! [String : String]
-            }
-           print(indexPath.row)
-            print(self.savedOrderFirebase)
-           // Database.database().reference().child("Ordered").child(self.selectedTableName)
+        let selectFoods = self.foods[indexPath.row]
+        if let foodsValue = selectFoods.value as? [String:String] {
+            Database.database().reference().child("Orders").child(selectedTableName).setValue(foodsValue)
         }
+    }
 }
