@@ -70,8 +70,9 @@ class TablesVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "selectedTable"{
-            let selectedTable = segue.destination as! SelectEatsAndDrinksVC
-            selectedTable.name = nameInCell
+             let selectedTable = segue.destination as! SelectEatsAndDrinksVC 
+                 selectedTable.name = nameInCell
+           
         }
     }    
 }

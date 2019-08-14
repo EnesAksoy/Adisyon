@@ -72,7 +72,7 @@ class EatsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectFoods = self.foods[indexPath.row]
         if let foodsValue = selectFoods.value as? [String:String] {
-            Database.database().reference().child("Orders").child(selectedTableName).setValue(foodsValue)
+            Database.database().reference().child("Orders").child(selectedTableName).childByAutoId().setValue(foodsValue)
         }
     }
 }

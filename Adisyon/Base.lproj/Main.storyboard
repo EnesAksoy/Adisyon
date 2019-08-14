@@ -351,7 +351,6 @@
                                 <state key="normal" title="İçecekler"/>
                                 <connections>
                                     <action selector="selectDrinkButton:" destination="lKD-Sc-o1F" eventType="touchUpInside" id="F2q-SO-Rxa"/>
-                                    <segue destination="3Mr-Ek-pP9" kind="show" id="dj2-Wj-SPL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZ7-nc-pc6">
@@ -379,6 +378,7 @@
                     <navigationItem key="navigationItem" id="kMs-21-BJR"/>
                     <connections>
                         <segue destination="e1Z-ob-QPc" kind="show" identifier="SelectToEat" id="6uK-YQ-nfk"/>
+                        <segue destination="EBv-I3-ZnL" kind="show" identifier="SelectToDrink" id="6EA-Ae-3P0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hr1-O0-Ks9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -935,7 +935,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="rnv-7G-72O"/>
-        <segue reference="Mmv-0W-hbG"/>
+        <segue reference="UNd-e9-xat"/>
+        <segue reference="6EA-Ae-3P0"/>
         <segue reference="6uK-YQ-nfk"/>
         <segue reference="xPl-hH-Ko2"/>
         <segue reference="vVK-OP-9gg"/>

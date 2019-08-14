@@ -22,6 +22,7 @@ class SelectEatsAndDrinksVC: UIViewController {
     }
     
     @IBAction func selectDrinkButton(_ sender: Any) {
+        performSegue(withIdentifier: "SelectToDrink", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -29,6 +30,10 @@ class SelectEatsAndDrinksVC: UIViewController {
             let selectToEat = segue.destination as! EatsVC
             selectToEat.selectedTableName = name
             
+        }
+        if segue.identifier == "SelectToDrink" {
+            let selectToDrink = segue.destination as! DrinksVC
+            selectToDrink.selectedTableName = name
         }
     }
     

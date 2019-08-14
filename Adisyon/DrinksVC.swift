@@ -17,15 +17,23 @@ class DrinksVC: UIViewController, UICollectionViewDataSource, UICollectionViewDe
     
     
     var drinksNameFromFirebase = [String]()
+    var selectedTableName = ""
+    var drinks : [DataSnapshot] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        getSnapshotValue()
+        print("nameee==   \(selectedTableName)")
         getDrinkDataFromFirebase()
+    }
+    func getSnapshotValue() {
+        Database.database().reference().child("Drinks").observe(.childAdded) { (snapshot) in
+            self.drinks.append(snapshot)
+        }
     }
     
     func getDrinkDataFromFirebase() {
-        
         Database.database().reference().child("Drinks").observe(.childAdded) { (snapshot) in
             let snapshotValue = snapshot.value as? NSDictionary
             let drinkNames = snapshotValue?.allKeys as? [String]
@@ -36,11 +44,9 @@ class DrinksVC: UIViewController, UICollectionViewDataSource, UICollectionViewDe
             self.drinkCollection.reloadData()
         }
     }
-    
       func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return drinksNameFromFirebase.count
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "drinkCell", for: indexPath) as! DrinkCollectionViewCell
@@ -60,6 +66,12 @@ class DrinksVC: UIViewController, UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.backgroundColor = UIColor.gray
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectDrink = drinks[indexPath.row]
+        if let drinksValue = selectDrink.value as? [String:String] {
+            Database.database().reference().child("Orders").child(selectedTableName).childByAutoId().setValue(drinksValue)
+        }
     }
     
     
