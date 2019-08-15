@@ -19,6 +19,9 @@
 		8F8E787A22F1A1AF0045155E /* SigUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E787922F1A1AF0045155E /* SigUpViewController.swift */; };
 		8F8E787C22F1A45A0045155E /* OrderOrAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E787B22F1A45A0045155E /* OrderOrAmountVC.swift */; };
 		8F8E787E22F1A6AF0045155E /* TablesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E787D22F1A6AF0045155E /* TablesVC.swift */; };
+		8FF694102304D32F0080E3F4 /* AmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF6940F2304D32F0080E3F4 /* AmountVC.swift */; };
+		8FF694122304D43C0080E3F4 /* AmountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF694112304D43C0080E3F4 /* AmountCollectionViewCell.swift */; };
+		8FF694142304DFAE0080E3F4 /* AmountPaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF694132304DFAE0080E3F4 /* AmountPaymentVC.swift */; };
 		8FFBDEBC22F99811003CED98 /* DeleteTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFBDEBB22F99811003CED98 /* DeleteTableVC.swift */; };
 		8FFBDEBE22FAEB44003CED98 /* SelectEatsAndDrinksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFBDEBD22FAEB44003CED98 /* SelectEatsAndDrinksVC.swift */; };
 		8FFBDEC022FAEDAD003CED98 /* EatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFBDEBF22FAEDAD003CED98 /* EatsVC.swift */; };
@@ -47,6 +50,9 @@
 		8F8E787922F1A1AF0045155E /* SigUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigUpViewController.swift; sourceTree = "<group>"; };
 		8F8E787B22F1A45A0045155E /* OrderOrAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderOrAmountVC.swift; sourceTree = "<group>"; };
 		8F8E787D22F1A6AF0045155E /* TablesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesVC.swift; sourceTree = "<group>"; };
+		8FF6940F2304D32F0080E3F4 /* AmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountVC.swift; sourceTree = "<group>"; };
+		8FF694112304D43C0080E3F4 /* AmountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountCollectionViewCell.swift; sourceTree = "<group>"; };
+		8FF694132304DFAE0080E3F4 /* AmountPaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountPaymentVC.swift; sourceTree = "<group>"; };
 		8FFBDEBB22F99811003CED98 /* DeleteTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTableVC.swift; sourceTree = "<group>"; };
 		8FFBDEBD22FAEB44003CED98 /* SelectEatsAndDrinksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEatsAndDrinksVC.swift; sourceTree = "<group>"; };
 		8FFBDEBF22FAEDAD003CED98 /* EatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatsVC.swift; sourceTree = "<group>"; };
@@ -119,6 +125,9 @@
 				8FFBDEC922FC406F003CED98 /* AddDrinkVC.swift */,
 				8FFBDEC522FAEEDF003CED98 /* DrinkCollectionViewCell.swift */,
 				8FFBDECD230186D5003CED98 /* DeleteDrinkVC.swift */,
+				8FF6940F2304D32F0080E3F4 /* AmountVC.swift */,
+				8FF694112304D43C0080E3F4 /* AmountCollectionViewCell.swift */,
+				8FF694132304DFAE0080E3F4 /* AmountPaymentVC.swift */,
 				8F8E786922F1A00A0045155E /* Main.storyboard */,
 				8F8E786C22F1A00B0045155E /* Assets.xcassets */,
 				8F8E786E22F1A00B0045155E /* LaunchScreen.storyboard */,
@@ -260,11 +269,14 @@
 				8FFBDEC222FAEDC5003CED98 /* DrinksVC.swift in Sources */,
 				8FFBDEC622FAEEDF003CED98 /* DrinkCollectionViewCell.swift in Sources */,
 				8FFBDECA22FC406F003CED98 /* AddDrinkVC.swift in Sources */,
+				8FF694102304D32F0080E3F4 /* AmountVC.swift in Sources */,
 				8FFBDEBC22F99811003CED98 /* DeleteTableVC.swift in Sources */,
 				8F3CDA5022F2F90A000CB4DC /* TableSaveVC.swift in Sources */,
 				8FFBDEBE22FAEB44003CED98 /* SelectEatsAndDrinksVC.swift in Sources */,
+				8FF694122304D43C0080E3F4 /* AmountCollectionViewCell.swift in Sources */,
 				8F8E786622F1A00A0045155E /* AppDelegate.swift in Sources */,
 				8F8E787C22F1A45A0045155E /* OrderOrAmountVC.swift in Sources */,
+				8FF694142304DFAE0080E3F4 /* AmountPaymentVC.swift in Sources */,
 				8F8E787822F1A0BE0045155E /* SigInViewController.swift in Sources */,
 				8F3CDA4E22F2F0CC000CB4DC /* TablesCollectionViewCell.swift in Sources */,
 				8FFBDEC422FAEEB9003CED98 /* EatCollectionViewCell.swift in Sources */,

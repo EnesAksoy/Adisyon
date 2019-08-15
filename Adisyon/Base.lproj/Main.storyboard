@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u4F-yZ-rbH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="igm-Ar-kYJ">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -176,6 +176,7 @@
                                 <state key="normal" title="Kasa"/>
                                 <connections>
                                     <action selector="amount:" destination="JWb-gf-3dE" eventType="touchUpInside" id="dXx-S2-AGV"/>
+                                    <segue destination="igm-Ar-kYJ" kind="show" id="a9f-jb-NcG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -194,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yrz-NY-NIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="725" y="51"/>
+            <point key="canvasLocation" x="1634.7826086956522" y="50.892857142857139"/>
         </scene>
         <!--TablesVC-->
         <scene sceneID="Pv0-2Z-RyU">
@@ -383,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hr1-O0-Ks9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5228.985507246377" y="-41.517857142857139"/>
+            <point key="canvasLocation" x="6139.130434782609" y="-41.517857142857139"/>
         </scene>
         <!--Delete FoodVC-->
         <scene sceneID="Dq1-es-csa">
@@ -593,7 +594,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5f-9M-TuS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7345" y="-397"/>
+            <point key="canvasLocation" x="8255.072463768116" y="-397.09821428571428"/>
         </scene>
         <!--DrinksVC-->
         <scene sceneID="5n4-MD-Zmd">
@@ -799,7 +800,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJr-mg-bjb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7345" y="406"/>
+            <point key="canvasLocation" x="8255.072463768116" y="405.80357142857139"/>
         </scene>
         <!--Delete TableVC-->
         <scene sceneID="7gh-rX-Z7j">
@@ -858,7 +859,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rz-k0-5GX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4318.840579710145" y="-41.517857142857139"/>
+            <point key="canvasLocation" x="5228.985507246377" y="-41.517857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LGn-jn-3P9">
@@ -896,6 +897,21 @@
             </objects>
             <point key="canvasLocation" x="5229" y="828"/>
         </scene>
+        <!--Amount PaymentVC-->
+        <scene sceneID="W0H-3d-y9B">
+            <objects>
+                <viewController id="2WW-1C-6rt" customClass="AmountPaymentVC" customModule="Adisyon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hip-83-6ML">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8v9-GI-ATg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uk0-SD-bRu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1678" y="828"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="DCX-Oz-2S7">
             <objects>
@@ -914,6 +930,66 @@
             </objects>
             <point key="canvasLocation" x="-139" y="869"/>
         </scene>
+        <!--AmountVC-->
+        <scene sceneID="coR-nM-nK7">
+            <objects>
+                <viewController id="igm-Ar-kYJ" customClass="AmountVC" customModule="Adisyon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fBh-Fx-mrx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zno-Dq-8Nh">
+                                <rect key="frame" x="20" y="165" width="374" height="625"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AVe-UW-EEU">
+                                    <size key="itemSize" width="165" height="59"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OrderCell" id="gbf-8H-hvx" customClass="AmountCollectionViewCell" customModule="Adisyon" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="masa ismi(hesap)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpe-3u-kcB">
+                                                    <rect key="frame" x="20" y="11" width="130" height="48"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <size key="customSize" width="170" height="70"/>
+                                        <connections>
+                                            <outlet property="tableNameForAmount" destination="mpe-3u-kcB" id="9Qt-xU-X7A"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="igm-Ar-kYJ" id="s4e-h9-MNf"/>
+                                    <outlet property="delegate" destination="igm-Ar-kYJ" id="TqZ-ls-Xzp"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fl7-2d-lfm"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kyV-WL-zzM"/>
+                    <connections>
+                        <outlet property="amountCollection" destination="zno-Dq-8Nh" id="LMd-p8-eeR"/>
+                        <segue destination="2WW-1C-6rt" kind="show" identifier="toAmountPayment" id="obq-32-Xya"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHF-kF-Ns4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1678.2608695652175" y="50.892857142857139"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="uhK-nI-9BN">
             <objects>
@@ -930,11 +1006,30 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5k-ET-tcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-139" y="51"/>
+            <point key="canvasLocation" x="771.01449275362324" y="50.892857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PTL-TY-CRz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zkg-gr-tuQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0eb-pd-VcS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="igm-Ar-kYJ" kind="relationship" relationship="rootViewController" id="PHH-de-nJd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t4n-fn-wW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2588.4057971014495" y="50.892857142857139"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="rnv-7G-72O"/>
+        <segue reference="a9f-jb-NcG"/>
         <segue reference="UNd-e9-xat"/>
         <segue reference="6EA-Ae-3P0"/>
         <segue reference="6uK-YQ-nfk"/>
