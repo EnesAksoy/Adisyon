@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="igm-Ar-kYJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zkg-gr-tuQ">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -165,7 +165,7 @@
                                 <state key="normal" title="Sipariş"/>
                                 <connections>
                                     <action selector="order:" destination="JWb-gf-3dE" eventType="touchUpInside" id="Gdr-wb-Px1"/>
-                                    <segue destination="Te2-hM-xVV" kind="show" id="vVK-OP-9gg"/>
+                                    <segue destination="u4F-yZ-rbH" kind="show" id="LTL-Vl-Bmg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZR-KP-lkr">
@@ -281,7 +281,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MoU-u1-drS"/>
                     </view>
-                    <navigationItem key="navigationItem" id="j3h-nl-mIm"/>
+                    <navigationItem key="navigationItem" id="j3h-nl-mIm">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="AEp-c2-q8o">
+                            <connections>
+                                <segue destination="1W4-fo-8r0" kind="show" id="tsE-zT-D2i"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tablesCollection" destination="unD-b6-ySN" id="diT-im-CMf"/>
                         <segue destination="lKD-Sc-o1F" kind="show" identifier="selectedTable" id="xPl-hH-Ko2"/>
@@ -289,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTX-EX-sV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="725" y="869"/>
+            <point key="canvasLocation" x="1634.7826086956522" y="868.52678571428567"/>
         </scene>
         <!--Table SaveVC-->
         <scene sceneID="kah-Ob-kXS">
@@ -334,7 +340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJn-Xt-qqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1738" y="869"/>
+            <point key="canvasLocation" x="2647.826086956522" y="868.52678571428567"/>
         </scene>
         <!--Select Eats And DrinksVC-->
         <scene sceneID="PIO-Yi-OkY">
@@ -355,7 +361,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZ7-nc-pc6">
-                                <rect key="frame" x="135" y="229" width="144" height="46"/>
+                                <rect key="frame" x="135" y="185" width="144" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="Gbw-IZ-KWn"/>
                                 </constraints>
@@ -395,14 +401,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sA-im-qhH">
-                                <rect key="frame" x="144" y="427" width="126" height="84"/>
+                                <rect key="frame" x="144" y="383" width="126" height="128"/>
                                 <state key="normal" title="Sil"/>
                                 <connections>
                                     <action selector="deleteFoodButton:" destination="hgY-wH-gYk" eventType="touchUpInside" id="XZd-jd-4TV"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lütfen yiyecek ismi giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IcN-ZJ-pQb">
-                                <rect key="frame" x="56" y="220" width="302" height="30"/>
+                                <rect key="frame" x="56" y="176" width="302" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="XbO-1Q-DaM"/>
                                 </constraints>
@@ -411,7 +417,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lütfen yiyecek tutarını giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZHk-Lz-42j">
-                                <rect key="frame" x="56" y="333" width="302" height="30"/>
+                                <rect key="frame" x="56" y="289" width="302" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="y7p-4W-YCw"/>
                                 </constraints>
@@ -453,7 +459,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CUK-vr-tYy">
-                                <rect key="frame" x="20" y="181" width="374" height="534"/>
+                                <rect key="frame" x="20" y="137" width="374" height="622"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FZv-RW-c8m">
                                     <size key="itemSize" width="170" height="72"/>
@@ -494,7 +500,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezv-uK-ryz">
-                                <rect key="frame" x="266" y="111" width="133" height="30"/>
+                                <rect key="frame" x="266" y="67" width="133" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="133" id="vlo-16-Aae"/>
                                 </constraints>
@@ -504,7 +510,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOs-Lk-U13">
-                                <rect key="frame" x="20" y="111" width="133" height="30"/>
+                                <rect key="frame" x="20" y="67" width="133" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="133" id="yXh-YG-hDd"/>
                                 </constraints>
@@ -551,7 +557,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yiyecek İsmi Giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bbZ-gy-x9m">
-                                <rect key="frame" x="44" y="232" width="326" height="30"/>
+                                <rect key="frame" x="44" y="188" width="326" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -605,7 +611,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="azM-Z0-Rw3">
-                                <rect key="frame" x="20" y="181" width="374" height="534"/>
+                                <rect key="frame" x="20" y="137" width="374" height="622"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FeT-T6-18N">
                                     <size key="itemSize" width="170" height="72"/>
@@ -646,7 +652,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xw-d4-gJU">
-                                <rect key="frame" x="266" y="111" width="133" height="30"/>
+                                <rect key="frame" x="266" y="67" width="133" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="133" id="Gwl-Zd-Lyb"/>
                                 </constraints>
@@ -656,7 +662,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8M-vq-KYs">
-                                <rect key="frame" x="20" y="111" width="133" height="30"/>
+                                <rect key="frame" x="20" y="67" width="133" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="133" id="rwY-be-Kpy"/>
                                 </constraints>
@@ -692,7 +698,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sxw-6e-aAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6207" y="828"/>
+            <point key="canvasLocation" x="7115.9420289855079" y="827.67857142857144"/>
         </scene>
         <!--Delete DrinkVC-->
         <scene sceneID="heq-g2-A9i">
@@ -703,7 +709,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lütfen İçecek İsmi Giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCc-0a-QON">
-                                <rect key="frame" x="44" y="188" width="326" height="30"/>
+                                <rect key="frame" x="44" y="144" width="326" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -746,7 +752,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mno-mw-zRA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7345" y="1165"/>
+            <point key="canvasLocation" x="8255.072463768116" y="1164.5089285714284"/>
         </scene>
         <!--Add DrinkVC-->
         <scene sceneID="1P0-ar-Brb">
@@ -757,7 +763,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="İçecek İsmi Giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Fk-ge-dm8">
-                                <rect key="frame" x="44" y="188" width="326" height="30"/>
+                                <rect key="frame" x="44" y="144" width="326" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -800,7 +806,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJr-mg-bjb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8255.072463768116" y="405.80357142857139"/>
+            <point key="canvasLocation" x="9165.217391304348" y="405.80357142857139"/>
         </scene>
         <!--Delete TableVC-->
         <scene sceneID="7gh-rX-Z7j">
@@ -895,7 +901,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WM0-Ly-TUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5229" y="828"/>
+            <point key="canvasLocation" x="6139.130434782609" y="827.67857142857144"/>
         </scene>
         <!--Amount PaymentVC-->
         <scene sceneID="W0H-3d-y9B">
@@ -904,13 +910,42 @@
                     <view key="view" contentMode="scaleToFill" id="hip-83-6ML">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Masa İsmi:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEv-yW-fx6">
+                                <rect key="frame" x="20" y="212" width="374" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Toplam Tutar:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yci-Is-Yps">
+                                <rect key="frame" x="20" y="324" width="374" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdi-Kj-OrK">
+                                <rect key="frame" x="145" y="528" width="125" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sıfırla"/>
+                                <connections>
+                                    <action selector="resetButton:" destination="2WW-1C-6rt" eventType="touchUpInside" id="Xx0-7d-Nes"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8v9-GI-ATg"/>
                     </view>
+                    <navigationItem key="navigationItem" id="KhG-Gz-uXM"/>
+                    <connections>
+                        <outlet property="tableName" destination="aEv-yW-fx6" id="aRg-6D-80X"/>
+                        <outlet property="totalAmount" destination="Yci-Is-Yps" id="h98-ea-COn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uk0-SD-bRu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1678" y="828"/>
+            <point key="canvasLocation" x="-1678" y="798"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DCX-Oz-2S7">
@@ -928,7 +963,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pf5-po-5Av" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-139" y="869"/>
+            <point key="canvasLocation" x="771.01449275362324" y="868.52678571428567"/>
         </scene>
         <!--AmountVC-->
         <scene sceneID="coR-nM-nK7">
@@ -976,6 +1011,15 @@
                                     <outlet property="delegate" destination="igm-Ar-kYJ" id="TqZ-ls-Xzp"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRj-d8-jAM">
+                                <rect key="frame" x="213" y="98" width="181" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Hesap Ekranından Çık"/>
+                                <connections>
+                                    <action selector="exitAmountVCButton:" destination="igm-Ar-kYJ" eventType="touchUpInside" id="gKw-dG-x8B"/>
+                                    <segue destination="1W4-fo-8r0" kind="show" id="z2P-b3-kQY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fl7-2d-lfm"/>
@@ -983,7 +1027,7 @@
                     <navigationItem key="navigationItem" id="kyV-WL-zzM"/>
                     <connections>
                         <outlet property="amountCollection" destination="zno-Dq-8Nh" id="LMd-p8-eeR"/>
-                        <segue destination="2WW-1C-6rt" kind="show" identifier="toAmountPayment" id="obq-32-Xya"/>
+                        <segue destination="2WW-1C-6rt" kind="show" identifier="toAmountPayment" id="2Od-kB-Thv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHF-kF-Ns4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1011,7 +1055,7 @@
         <!--Navigation Controller-->
         <scene sceneID="PTL-TY-CRz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zkg-gr-tuQ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AmountVC" automaticallyAdjustsScrollViewInsets="NO" id="zkg-gr-tuQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0eb-pd-VcS">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1026,14 +1070,33 @@
             </objects>
             <point key="canvasLocation" x="-2588.4057971014495" y="50.892857142857139"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pxx-O1-p6T">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6VT-33-gNV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i0t-Ms-jSR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2WW-1C-6rt" kind="relationship" relationship="rootViewController" id="5Yk-sc-fth"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bdm-KT-S1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2588" y="798"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="rnv-7G-72O"/>
+        <segue reference="tsE-zT-D2i"/>
         <segue reference="a9f-jb-NcG"/>
         <segue reference="UNd-e9-xat"/>
+        <segue reference="2Od-kB-Thv"/>
         <segue reference="6EA-Ae-3P0"/>
         <segue reference="6uK-YQ-nfk"/>
         <segue reference="xPl-hH-Ko2"/>
-        <segue reference="vVK-OP-9gg"/>
     </inferredMetricsTieBreakers>
 </document>

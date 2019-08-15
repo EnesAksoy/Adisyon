@@ -63,5 +63,9 @@ class AmountVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         }
     }
     
+    @IBAction func exitAmountVCButton(_ sender: Any) {
+    }
+    
+    
     
 }
