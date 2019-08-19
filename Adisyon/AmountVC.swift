@@ -26,6 +26,7 @@ class AmountVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         Database.database().reference().child("Orders").observe(.childAdded) { (snapshot) in
             self.dataSnapshot.append(snapshot.key)
             self.amountCollection.reloadData()
+            snapshot.ref.removeAllObservers()
         }
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

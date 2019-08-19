@@ -37,13 +37,14 @@ class AmountPaymentVC: UIViewController {
                 self.sum = self.sum + doubleAmount!
             }
             self.totalAmount.text = "Toplam Tutar=  \(self.sum)"
-
+            snapshot.ref.removeAllObservers()
         }
     }
     
     @IBAction func resetButton(_ sender: Any) {
         Database.database().reference().child("Orders").child(amountTableName).observe(.childAdded) { (snapshot) in
             snapshot.ref.removeValue()
+            snapshot.ref.removeAllObservers()
         }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let amountVC = storyboard.instantiateViewController(withIdentifier: "AmountVC")

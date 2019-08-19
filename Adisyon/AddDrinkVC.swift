@@ -16,13 +16,10 @@ class AddDrinkVC: UIViewController {
     
     var drinkNameAmount:[String:String] = [:]
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
-    
     @IBAction func addDrinkButton(_ sender: Any) {
         
         drinkNameAmount = [drinkName.text! : drinkAmount.text!]

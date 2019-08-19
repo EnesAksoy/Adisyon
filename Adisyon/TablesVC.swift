@@ -31,6 +31,7 @@ class TablesVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
             
             self.tableNamesFromFirebase.append(tableNames)
             self.tablesCollection.reloadData()
+            snapshot.ref.removeAllObservers()
         }
     }
     

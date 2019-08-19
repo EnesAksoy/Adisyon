@@ -21,27 +21,20 @@ class EatsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        getSnapshotValue()
-        getEatDataFromFirebase()
-
-    }
-    func getSnapshotValue() {
-        Database.database().reference().child("Foods").observe(.childAdded) { (snapshot) in
-            self.foods.append(snapshot)
-        }
-      
-    }
     
+        getEatDataFromFirebase()
+    }
     func getEatDataFromFirebase() {
         
         Database.database().reference().child("Foods").observe(.childAdded) { (snapshot) in
+            self.foods.append(snapshot)
             let snapshotValue = snapshot.value as? NSDictionary
             let foodNames = snapshotValue?.allKeys as? [String]
             for f in foodNames! {
                 self.eatNamesFromFirebase.append(f)
             }
             self.eatCollection.reloadData()
+            snapshot.ref.removeAllObservers()
         }
     }
     

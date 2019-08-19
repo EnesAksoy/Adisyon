@@ -11,10 +11,7 @@ import FirebaseDatabase
 
 class DrinksVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
    
-    
-    
     @IBOutlet weak var drinkCollection: UICollectionView!
-    
     
     var drinksNameFromFirebase = [String]()
     var selectedTableName = ""
@@ -23,18 +20,11 @@ class DrinksVC: UIViewController, UICollectionViewDataSource, UICollectionViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        getSnapshotValue()
-        print("nameee==   \(selectedTableName)")
         getDrinkDataFromFirebase()
     }
-    func getSnapshotValue() {
-        Database.database().reference().child("Drinks").observe(.childAdded) { (snapshot) in
-            self.drinks.append(snapshot)
-        }
-    }
-    
     func getDrinkDataFromFirebase() {
         Database.database().reference().child("Drinks").observe(.childAdded) { (snapshot) in
+            self.drinks.append(snapshot)
             let snapshotValue = snapshot.value as? NSDictionary
             let drinkNames = snapshotValue?.allKeys as? [String]
             
@@ -42,6 +32,7 @@ class DrinksVC: UIViewController, UICollectionViewDataSource, UICollectionViewDe
                 self.drinksNameFromFirebase.append(d)
             }
             self.drinkCollection.reloadData()
+            snapshot.ref.removeAllObservers()
         }
     }
       func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

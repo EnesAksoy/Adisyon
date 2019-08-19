@@ -20,19 +20,15 @@ class DeleteTableVC: UIViewController {
         super.viewDidLoad()
         
     }
-    
-    
     @IBAction func deleteButton(_ sender: Any) {
         
         if tableName.text == "" {
             showAlert(title: "HATA", message: "Lütfen masa ismini giriniz")
         }else{
-            
            // nameMatchingFromFirebase()
-            
-
             Database.database().reference().child("TableNames").queryOrdered(byChild: "tableName").queryEqual(toValue: tableName.text!).observe(.childAdded) { (snapshot) in
             snapshot.ref.removeValue()
+            snapshot.ref.removeAllObservers()
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let tablesVC = storyboard.instantiateViewController(withIdentifier: "TablesVC")
             self.present(tablesVC, animated: true, completion: nil)

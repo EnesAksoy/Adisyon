@@ -254,7 +254,7 @@
                                 </constraints>
                                 <state key="normal" title="Masa Ekle"/>
                                 <connections>
-                                    <segue destination="2YK-sv-fib" kind="show" id="t47-3r-RHq"/>
+                                    <segue destination="2YK-sv-fib" kind="show" id="Ux7-HS-12W"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEd-a4-ImK">
@@ -340,7 +340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJn-Xt-qqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2647.826086956522" y="868.52678571428567"/>
+            <point key="canvasLocation" x="2199" y="1708"/>
         </scene>
         <!--Select Eats And DrinksVC-->
         <scene sceneID="PIO-Yi-OkY">
@@ -361,7 +361,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZ7-nc-pc6">
-                                <rect key="frame" x="135" y="185" width="144" height="46"/>
+                                <rect key="frame" x="135" y="229" width="144" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="Gbw-IZ-KWn"/>
                                 </constraints>
@@ -401,14 +401,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sA-im-qhH">
-                                <rect key="frame" x="144" y="383" width="126" height="128"/>
+                                <rect key="frame" x="144" y="427" width="126" height="84"/>
                                 <state key="normal" title="Sil"/>
                                 <connections>
                                     <action selector="deleteFoodButton:" destination="hgY-wH-gYk" eventType="touchUpInside" id="XZd-jd-4TV"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lütfen yiyecek ismi giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IcN-ZJ-pQb">
-                                <rect key="frame" x="56" y="176" width="302" height="30"/>
+                                <rect key="frame" x="56" y="220" width="302" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="XbO-1Q-DaM"/>
                                 </constraints>
@@ -417,7 +417,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lütfen yiyecek tutarını giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZHk-Lz-42j">
-                                <rect key="frame" x="56" y="289" width="302" height="30"/>
+                                <rect key="frame" x="56" y="333" width="302" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="y7p-4W-YCw"/>
                                 </constraints>
@@ -441,6 +441,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oKd-lI-WxC"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1cK-pL-9hY"/>
                     <connections>
                         <outlet property="foodAmount" destination="ZHk-Lz-42j" id="5k0-pY-6ER"/>
                         <outlet property="foodName" destination="ZHk-Lz-42j" id="JBX-VE-oqK"/>
@@ -448,7 +449,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lio-bP-1Ol" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7345" y="-1159"/>
+            <point key="canvasLocation" x="8255.072463768116" y="-1159.1517857142856"/>
         </scene>
         <!--EatsVC-->
         <scene sceneID="QsL-bV-xTw">
@@ -459,7 +460,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CUK-vr-tYy">
-                                <rect key="frame" x="20" y="137" width="374" height="622"/>
+                                <rect key="frame" x="20" y="181" width="374" height="534"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FZv-RW-c8m">
                                     <size key="itemSize" width="170" height="72"/>
@@ -500,23 +501,23 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezv-uK-ryz">
-                                <rect key="frame" x="266" y="67" width="133" height="30"/>
+                                <rect key="frame" x="266" y="111" width="133" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="133" id="vlo-16-Aae"/>
                                 </constraints>
                                 <state key="normal" title="Yiyecek Ekle"/>
                                 <connections>
-                                    <segue destination="kPQ-n4-76y" kind="show" id="8PV-L4-e9o"/>
+                                    <segue destination="asb-9D-Bx3" kind="show" id="8PV-L4-e9o"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOs-Lk-U13">
-                                <rect key="frame" x="20" y="67" width="133" height="30"/>
+                                <rect key="frame" x="20" y="111" width="133" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="133" id="yXh-YG-hDd"/>
                                 </constraints>
                                 <state key="normal" title="Yiyecek Sil"/>
                                 <connections>
-                                    <segue destination="hgY-wH-gYk" kind="show" id="AiH-dT-pdN"/>
+                                    <segue destination="tJf-xW-gGO" kind="show" id="AiH-dT-pdN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -557,7 +558,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yiyecek İsmi Giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bbZ-gy-x9m">
-                                <rect key="frame" x="44" y="188" width="326" height="30"/>
+                                <rect key="frame" x="44" y="232" width="326" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -593,6 +594,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="b7N-Xl-rIh"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fAU-YC-N8j"/>
                     <connections>
                         <outlet property="foodAmount" destination="edX-hl-70k" id="lpE-rG-VQ5"/>
                         <outlet property="foodName" destination="bbZ-gy-x9m" id="6kz-FB-YER"/>
@@ -600,7 +602,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5f-9M-TuS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8255.072463768116" y="-397.09821428571428"/>
+            <point key="canvasLocation" x="8255" y="-425"/>
         </scene>
         <!--DrinksVC-->
         <scene sceneID="5n4-MD-Zmd">
@@ -611,7 +613,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="azM-Z0-Rw3">
-                                <rect key="frame" x="20" y="137" width="374" height="622"/>
+                                <rect key="frame" x="20" y="181" width="374" height="534"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FeT-T6-18N">
                                     <size key="itemSize" width="170" height="72"/>
@@ -652,23 +654,23 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xw-d4-gJU">
-                                <rect key="frame" x="266" y="67" width="133" height="30"/>
+                                <rect key="frame" x="266" y="111" width="133" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="133" id="Gwl-Zd-Lyb"/>
                                 </constraints>
                                 <state key="normal" title="İçecek Ekle"/>
                                 <connections>
-                                    <segue destination="Ai9-fj-GvF" kind="show" id="w1m-5N-g3M"/>
+                                    <segue destination="xpS-tP-01U" kind="show" id="w1m-5N-g3M"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8M-vq-KYs">
-                                <rect key="frame" x="20" y="67" width="133" height="30"/>
+                                <rect key="frame" x="20" y="111" width="133" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="133" id="rwY-be-Kpy"/>
                                 </constraints>
                                 <state key="normal" title="İçecek Sil"/>
                                 <connections>
-                                    <segue destination="77J-35-9TQ" kind="show" id="GD7-l3-IKZ"/>
+                                    <segue destination="ubo-o6-2dq" kind="show" id="GD7-l3-IKZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -698,7 +700,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sxw-6e-aAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7115.9420289855079" y="827.67857142857144"/>
+            <point key="canvasLocation" x="6139" y="869"/>
         </scene>
         <!--Delete DrinkVC-->
         <scene sceneID="heq-g2-A9i">
@@ -709,7 +711,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lütfen İçecek İsmi Giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCc-0a-QON">
-                                <rect key="frame" x="44" y="144" width="326" height="30"/>
+                                <rect key="frame" x="44" y="188" width="326" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -745,6 +747,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EcU-Zs-bah"/>
                     </view>
+                    <navigationItem key="navigationItem" id="K0a-r1-jqW"/>
                     <connections>
                         <outlet property="drinkAmount" destination="htj-ea-VFM" id="cEn-bm-UrO"/>
                         <outlet property="drinkName" destination="fCc-0a-QON" id="AVB-gB-FoN"/>
@@ -752,7 +755,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mno-mw-zRA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8255.072463768116" y="1164.5089285714284"/>
+            <point key="canvasLocation" x="9165.217391304348" y="1177.2321428571429"/>
         </scene>
         <!--Add DrinkVC-->
         <scene sceneID="1P0-ar-Brb">
@@ -763,7 +766,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="İçecek İsmi Giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Fk-ge-dm8">
-                                <rect key="frame" x="44" y="144" width="326" height="30"/>
+                                <rect key="frame" x="44" y="188" width="326" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -799,6 +802,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rqo-Lj-1xA"/>
                     </view>
+                    <navigationItem key="navigationItem" id="mz6-Ym-Cwc"/>
                     <connections>
                         <outlet property="drinkAmount" destination="DYW-16-1iL" id="h0S-vZ-QFa"/>
                         <outlet property="drinkName" destination="8Fk-ge-dm8" id="Auv-Tu-eTD"/>
@@ -806,7 +810,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJr-mg-bjb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9165.217391304348" y="405.80357142857139"/>
+            <point key="canvasLocation" x="8255" y="437"/>
         </scene>
         <!--Delete TableVC-->
         <scene sceneID="7gh-rX-Z7j">
@@ -847,7 +851,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fEq-nZ-OaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="725" y="1576"/>
+            <point key="canvasLocation" x="972" y="1708"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="X3V-rj-8oy">
@@ -901,7 +905,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WM0-Ly-TUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6139.130434782609" y="827.67857142857144"/>
+            <point key="canvasLocation" x="5229" y="869"/>
         </scene>
         <!--Amount PaymentVC-->
         <scene sceneID="W0H-3d-y9B">
@@ -1088,14 +1092,86 @@
             </objects>
             <point key="canvasLocation" x="-2588" y="798"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GxH-hU-bK6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tJf-xW-gGO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Iq1-0D-wi3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hgY-wH-gYk" kind="relationship" relationship="rootViewController" id="7us-f7-LNe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Etq-53-4nb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7344.9275362318849" y="-1159.1517857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bo6-EK-8LY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="asb-9D-Bx3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SXd-JX-vjw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kPQ-n4-76y" kind="relationship" relationship="rootViewController" id="4OR-yY-zUz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tU2-EL-T6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7345" y="-425"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nrt-hR-zTK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xpS-tP-01U" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Z1o-hw-9KM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ai9-fj-GvF" kind="relationship" relationship="rootViewController" id="P8w-sR-O1Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fhc-P6-vSX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7345" y="437"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5B1-ZP-T53">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ubo-o6-2dq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kU2-Iv-l93">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="77J-35-9TQ" kind="relationship" relationship="rootViewController" id="kUm-db-MGJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uId-lC-zWx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8255.072463768116" y="1177.9017857142856"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="rnv-7G-72O"/>
         <segue reference="tsE-zT-D2i"/>
         <segue reference="a9f-jb-NcG"/>
-        <segue reference="UNd-e9-xat"/>
+        <segue reference="Mmv-0W-hbG"/>
         <segue reference="2Od-kB-Thv"/>
-        <segue reference="6EA-Ae-3P0"/>
+        <segue reference="Apr-fb-f6j"/>
         <segue reference="6uK-YQ-nfk"/>
         <segue reference="xPl-hH-Ko2"/>
     </inferredMetricsTieBreakers>

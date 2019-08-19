@@ -13,26 +13,20 @@ class DeleteFoodVC: UIViewController {
     
     @IBOutlet weak var foodName: UITextField!
     @IBOutlet weak var foodAmount: UITextField!
-
-   // var eatNamesFromFirebase = [String] ()
     
-
+   // var eatNamesFromFirebase = [String] ()
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-    
     @IBAction func deleteFoodButton(_ sender: Any) {
-        
         if foodName.text == nil {
             showAlert(title: "HATA", message: "Lütfen yemek ismini giriniz")
         }else {
-            
       //  nameMatchingFromFirebase()
-        
         Database.database().reference().child("Foods").queryOrdered(byChild: foodName.text!).queryEqual(toValue: foodAmount.text!).observe(.childAdded) { (snapshot) in
             snapshot.ref.removeValue()
-        
+            snapshot.ref.removeAllObservers()
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let eatsVC = storyboard.instantiateViewController(withIdentifier: "EatsVC")
             self.present(eatsVC, animated: true, completion: nil)
