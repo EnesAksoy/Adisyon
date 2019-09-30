@@ -443,8 +443,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="1cK-pL-9hY"/>
                     <connections>
-                        <outlet property="foodAmount" destination="ZHk-Lz-42j" id="5k0-pY-6ER"/>
-                        <outlet property="foodName" destination="ZHk-Lz-42j" id="JBX-VE-oqK"/>
+                        <outlet property="foodAmount" destination="ZHk-Lz-42j" id="ci4-ed-jrQ"/>
+                        <outlet property="foodName" destination="IcN-ZJ-pQb" id="GRp-ec-VKS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lio-bP-1Ol" userLabel="First Responder" sceneMemberID="firstResponder"/>

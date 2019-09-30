@@ -23,11 +23,10 @@ class AmountPaymentVC: UIViewController {
         getDataOrderFromFirebase()
         tableName.text = "Masa İsmi: \(amountTableName)"
     }
-    func totalAmountCalculation() {
-        
-    }
+
     func getDataOrderFromFirebase() {
         Database.database().reference().child("Orders").child(amountTableName).observe(.childAdded) { (snapshot) in
+            
             let snapshotValue = snapshot.value as? NSDictionary
             let amounts = snapshotValue?.allValues as? [String]
             
@@ -42,10 +41,21 @@ class AmountPaymentVC: UIViewController {
     }
     
     @IBAction func resetButton(_ sender: Any) {
+        
         Database.database().reference().child("Orders").child(amountTableName).observe(.childAdded) { (snapshot) in
-            snapshot.ref.removeValue()
-            snapshot.ref.removeAllObservers()
-        }
+            Database.database().reference().child("Orders").child(self.amountTableName).queryOrdered(byChild:snapshot.key).observe(.childAdded) { (snapshot1) in
+                snapshot1.ref.removeValue()
+                snapshot1.ref.removeAllObservers()
+                
+            }
+         }
+
+
+//        Database.database().reference().child("Orders").child(amountTableName).queryEqual(toValue: amountTableName).observe(.childAdded) { (snapshot) in
+//            snapshot.ref.removeValue()
+//            snapshot.ref.removeAllObservers()
+//        }
+        getDataOrderFromFirebase()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let amountVC = storyboard.instantiateViewController(withIdentifier: "AmountVC")
         

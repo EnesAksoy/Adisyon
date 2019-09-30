@@ -24,13 +24,13 @@ class DeleteFoodVC: UIViewController {
             showAlert(title: "HATA", message: "Lütfen yemek ismini giriniz")
         }else {
       //  nameMatchingFromFirebase()
-        Database.database().reference().child("Foods").queryOrdered(byChild: foodName.text!).queryEqual(toValue: foodAmount.text!).observe(.childAdded) { (snapshot) in
-            snapshot.ref.removeValue()
-            snapshot.ref.removeAllObservers()
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let eatsVC = storyboard.instantiateViewController(withIdentifier: "EatsVC")
-            self.present(eatsVC, animated: true, completion: nil)
-        }
+            Database.database().reference().child("Foods").queryOrdered(byChild: foodName.text!).queryEqual(toValue: foodAmount.text!).observeSingleEvent(of: .childAdded) { (snapshot) in
+                snapshot.ref.removeValue()
+                snapshot.ref.removeAllObservers()
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let eatsVC = storyboard.instantiateViewController(withIdentifier: "EatsVC")
+                self.present(eatsVC, animated: true, completion: nil)
+            }        
       }
     }
     
